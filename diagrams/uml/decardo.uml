@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>805b3d8b-b259-4a96-9495-e6b55681ced9.DATABASE:decardo</OriginalElement>
+  <nodes>
+    <node x="498.81423423423416" y="-64.76205405405405">805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.COMMENT</node>
+    <node x="498.81423423423416" y="92.88023423423434">805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.RATING</node>
+    <node x="143.13250450450454" y="138.38574414414418">805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.WORK</node>
+    <node x="517.8142342342342" y="250.52252252252273">805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.WATCHLIST</node>
+    <node x="138.3704504504505" y="-76.28450450450447">805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.USER</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.COMMENT" target="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.USER" relationship="REFERENCES">
+      <point x="80.55772972972977" y="49.77881081081085" />
+      <point x="748.5098738738737" y="45.516756756756806" />
+      <point x="748.5098738738737" y="-94.52266666666674" />
+      <point x="90.20010810810797" y="-94.52266666666674" />
+      <point x="90.20010810810797" y="77.25348508828824" />
+      <point x="-49.90629292972935" y="71.03798959279271" />
+    </edge>
+    <edge source="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.WATCHLIST" target="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.WORK" relationship="REFERENCES">
+      <point x="-59.39387387387342" y="3.045045045044901" />
+      <point x="410.0371171171176" y="291.56756756756766" />
+      <point x="410.0371171171176" y="291.56756756756755" />
+      <point x="80.52136936936989" y="70.68182342342337" />
+    </edge>
+    <edge source="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.WATCHLIST" target="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.USER" relationship="REFERENCES">
+      <point x="62.252252252252674" y="25.519639639639422" />
+      <point x="748.5098738738737" y="314.0421621621622" />
+      <point x="748.5098738738737" y="-94.52266666666674" />
+      <point x="90.200108108108" y="-94.52266666666674" />
+      <point x="90.200108108108" y="77.83539753513509" />
+      <point x="-49.90629292972935" y="71.61990203963956" />
+    </edge>
+    <edge source="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.RATING" target="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.USER" relationship="REFERENCES">
+      <point x="78.58330522522533" y="48.16052756756724" />
+      <point x="748.5098738738737" y="201.54076180180158" />
+      <point x="748.5098738738737" y="-94.52266666666674" />
+      <point x="90.20010810810797" y="-94.52266666666674" />
+      <point x="90.20010810810797" y="77.54444131171167" />
+      <point x="-50.19724915315277" y="71.32894581621613" />
+    </edge>
+    <edge source="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.COMMENT" target="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.WORK" relationship="REFERENCES">
+      <point x="-79.26929729729727" y="28.468540540540573" />
+      <point x="369.2070566596036" y="24.206486486486526" />
+      <point x="369.2070566596036" y="291.05376576576566" />
+      <point x="78.9083963963962" y="70.16802162162148" />
+    </edge>
+    <edge source="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.RATING" target="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.WORK" relationship="REFERENCES">
+      <point x="-78.1367927927929" y="28.019477477477352" />
+      <point x="369.2070566596036" y="181.3997117117117" />
+      <point x="369.2070566596036" y="291.14356756756746" />
+      <point x="78.11632432432424" y="70.25782342342328" />
+    </edge>
+    <edge source="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.WORK" target="805b3d8b-b259-4a96-9495-e6b55681ced9.TABLE:decardo.public.USER" relationship="REFERENCES">
+      <point x="-78.61549549549557" y="-19.173837837837766" />
+      <point x="90.20010810810797" y="201.71190630630642" />
+      <point x="90.20010810810797" y="77.83539753513509" />
+      <point x="-50.48820537657619" y="71.61990203963956" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.407771915584416" showDependencies="false" x="649.5507743135182" y="178.84799999999998" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
