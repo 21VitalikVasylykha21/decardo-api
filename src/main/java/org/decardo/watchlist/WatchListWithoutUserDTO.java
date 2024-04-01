@@ -2,8 +2,7 @@ package org.decardo.watchlist;
 
 import lombok.Builder;
 import lombok.Getter;
-import org.decardo.user.UserDTO;
-import org.decardo.worker.WorkDTO;
+import org.decardo.worker.WorkResponseDTO;
 
 /**
  * @author Vitalii Vasylykha
@@ -13,5 +12,5 @@ import org.decardo.worker.WorkDTO;
 @Getter
 @Builder
 public class WatchListWithoutUserDTO {
-	public WorkDTO work;
+	public WorkResponseDTO work;
 }
