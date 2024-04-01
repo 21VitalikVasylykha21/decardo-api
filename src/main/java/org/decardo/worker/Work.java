@@ -22,22 +22,20 @@ import org.decardo.user.User;
  * @since 2024/03/24
  */
 @Entity
-@Table(name = "`WORK`")
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "`WORK`")
 public class Work {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
 	private Long id;
 
-	@Column(name = "TITLE")
 	private String title;
 
-	@Column(name = "DESCRIPTION")
+
 	private String description;
 
 	@Column(name = "FILE_URL")

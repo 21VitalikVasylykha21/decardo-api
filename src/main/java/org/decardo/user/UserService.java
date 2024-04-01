@@ -11,7 +11,6 @@ import org.decardo.exception.ExistObjectException;
 import org.decardo.exception.ValidationException;
 import org.decardo.security.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -49,6 +48,14 @@ public class UserService {
 			throw new EntityNotFoundException(User.class, username);
 		}
 		return user.get();
+	}
+
+	public User findById(Long userId) {
+		List<User> users = userRepository.findAllById(List.of(userId));
+		if (users.size() != 1) {
+			throw new EntityNotFoundException(User.class, userId);
+		}
+		return users.get(0);
 	}
 
 	public List<User> findAll() {
@@ -100,10 +107,12 @@ public class UserService {
 	public String generateJwt(UserDTO userDTO) {
 		return jwtUtils.generateJwtCookie(userDTO.getUsername()).toString();
 	}
+
 	public String cleanJwt() {
 		return jwtUtils.getCleanJwtCookie().toString();
 	}
-	private void validation(UserDTO userDTO){
+
+	private void validation(UserDTO userDTO) {
 		Set<ConstraintViolation<UserDTO>> violations = userDTOValidator.validate(userDTO);
 		if (!violations.isEmpty()) {
 			String errorMessage = userDTOValidator.getValidationErrorMessage(violations);

@@ -10,7 +10,7 @@ import org.springframework.http.HttpStatus;
  * @since 2023/04/23
  */
 @Getter
-public class ListObjectResponse<T> {
+public class ListObjectResponse<T> implements CustomResponse {
 	private final Long total;
 	private final Integer status;
 	private final List<T> result;

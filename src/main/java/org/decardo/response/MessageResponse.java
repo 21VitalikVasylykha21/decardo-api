@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
  * @since 2023/11/22
  */
 @Getter
-public class MessageResponse<T> {
+public class MessageResponse<T> implements CustomResponse {
 	private final Integer status;
 	private final String message;
 

@@ -10,4 +10,7 @@ public class ExistObjectException extends RuntimeException {
 		super("The " + object.getSimpleName() + " object already exists in the value " + value);
 	}
 
+	public ExistObjectException(Class object) {
+		super("The " + object.getSimpleName() + " object already exists.");
+	}
 }

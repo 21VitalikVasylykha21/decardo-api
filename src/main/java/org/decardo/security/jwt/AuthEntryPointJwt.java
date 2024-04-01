@@ -25,10 +25,7 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 	}
 
 	private MessageResponse generateResponse(AuthenticationException authException) {
-		if (authException.getCause() != null) {
-			return new MessageResponse<>(HttpServletResponse.SC_UNAUTHORIZED, authException.getMessage());
-		}
-		return new MessageResponse<>(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Something went wrong. Please contact support.");
+		return new MessageResponse<>(HttpServletResponse.SC_UNAUTHORIZED, authException.getMessage());
 	}
 
 }
