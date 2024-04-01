@@ -51,11 +51,11 @@ public class UserService {
 	}
 
 	public User findById(Long userId) {
-		List<User> users = userRepository.findAllById(List.of(userId));
-		if (users.size() != 1) {
+		Optional<User> user = userRepository.findById(userId);
+		if (user.isEmpty()) {
 			throw new EntityNotFoundException(User.class, userId);
 		}
-		return users.get(0);
+		return user.get();
 	}
 
 	public List<User> findAll() {

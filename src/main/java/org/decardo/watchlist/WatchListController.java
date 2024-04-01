@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
 @RestController
-@RequestMapping("api/v1/user/watch/list")
+@RequestMapping("api/v1/watch/list")
 public class WatchListController {
 	@Autowired
 	private WatchListService watchListService;
