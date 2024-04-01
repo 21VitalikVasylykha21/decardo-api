@@ -1,7 +1,5 @@
-package org.decardo.security.services;
+package org.decardo.user;
 
-import org.decardo.user.User;
-import org.decardo.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
-	UserRepository userRepository;
+	private UserRepository userRepository;
 
 	@Override
 	@Transactional

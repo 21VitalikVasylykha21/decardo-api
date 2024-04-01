@@ -25,8 +25,7 @@ public class WorkController {
 	@GetMapping
 	public ListObjectResponse<WorkDTO> getAll() {
 		return new ListObjectResponse<>(workService.findAll().stream()
-				.map(workMapper::workToWorkDTO)
+				.map(workMapper::convert)
 				.toList());
-
 	}
 }

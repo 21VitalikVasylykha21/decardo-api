@@ -1,9 +1,8 @@
-package org.decardo.security.services;
+package org.decardo.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Collection;
 import java.util.Objects;
-import org.decardo.user.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

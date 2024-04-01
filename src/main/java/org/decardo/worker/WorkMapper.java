@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class WorkMapper {
 
-	public WorkDTO workToWorkDTO(Work worker) {
+	public WorkDTO convert(Work worker) {
 		return WorkDTO.builder()
 				.id(worker.getId())
 				.title(worker.getTitle())

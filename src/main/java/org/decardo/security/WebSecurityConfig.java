@@ -3,7 +3,7 @@ package org.decardo.security;
 import java.util.Arrays;
 import org.decardo.security.jwt.AuthEntryPointJwt;
 import org.decardo.security.jwt.AuthTokenFilter;
-import org.decardo.security.services.UserDetailsServiceImpl;
+import org.decardo.user.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,7 +26,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @EnableMethodSecurity
 public class WebSecurityConfig {
 	@Autowired
-	UserDetailsServiceImpl userDetailsService;
+	private UserDetailsServiceImpl userDetailsService;
 
 	@Autowired
 	private AuthEntryPointJwt unauthorizedHandler;
@@ -56,14 +56,25 @@ public class WebSecurityConfig {
 
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		http.cors().configurationSource(corsConfigurationSource()).and().csrf(AbstractHttpConfigurer::disable).exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler)).sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)).authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/**").permitAll().requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll().requestMatchers("/api/course").permitAll().requestMatchers("/api/course/{id}").permitAll().requestMatchers("/api/course/find/{securityCode}").permitAll().anyRequest().authenticated()).authenticationProvider(authenticationProvider()).addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+		http.cors()
+				.configurationSource(corsConfigurationSource())
+				.and()
+				.csrf(AbstractHttpConfigurer::disable)
+				.exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
+				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+				.authorizeHttpRequests(auth -> auth.requestMatchers("/api/v1/user/auth/**").permitAll()
+						//.requestMatchers("/api/**").permitAll()
+						.requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
+						.anyRequest().authenticated())
+				.authenticationProvider(authenticationProvider())
+				.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 		return http.build();
 	}
 
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
-		configuration.setAllowedOrigins(Arrays.asList( "http://localhost:3000", "http://localhost:8080"));
+		configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000", "http://localhost:8080"));
 		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 		configuration.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
 		configuration.setAllowCredentials(true);

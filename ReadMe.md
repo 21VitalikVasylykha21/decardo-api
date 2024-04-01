@@ -1,5 +1,5 @@
 <p align="center" style="font-size: 50px; font-weight: bold">
-  Документація БД `Decardo`
+  Decardo
 </p>
 
 <p align="center" style="font-size: 35px; font-weight: bold">
@@ -21,6 +21,16 @@
 3) Користувачі можуть залишати коментарі та оцінки для робіт.
 4) Адміністратор повинен мати можливість додавати, видаляти та редагувати роботи та інформацію про авторів.
 5) Адміністратор повинен мати можливість модерувати коментарі та оцінки.
+
+<p align="center" style="font-size: 50px; font-weight: bold">
+  Endpoint
+</p>
+
+Посилання на swagger [{baseUrl}/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/)
+
+<p align="center" style="font-size: 50px; font-weight: bold">
+  База даних
+</p>
 
 <p align="center" style="font-size: 35px; font-weight: bold">
   Структура таблиць
@@ -100,7 +110,6 @@
 <p align="center">
   <img style="height: 600px; width: 1100px" alt="ER diagrams" src="diagrams/png/ER-diagram.png" />
 </p>
-
 
 <p align="center" style="font-size: 35px; font-weight: bold">
   Запити до модулю 1

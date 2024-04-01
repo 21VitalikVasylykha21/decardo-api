@@ -1,5 +1,6 @@
 package org.decardo.response;
 
+import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 /**
@@ -7,9 +8,10 @@ import org.springframework.http.HttpStatus;
  * @company UzhNU
  * @since 2023/11/22
  */
+@Getter
 public class MessageResponse<T> {
-	private Integer status;
-	private String message;
+	private final Integer status;
+	private final String message;
 
 	public MessageResponse(Integer status, String message) {
 		this.status = status;
@@ -29,13 +31,5 @@ public class MessageResponse<T> {
 	public MessageResponse(HttpStatus status) {
 		this.status = status.value();
 		this.message = "";
-	}
-
-	public Integer getStatus() {
-		return status;
-	}
-
-	public String getMessage() {
-		return message;
 	}
 }
