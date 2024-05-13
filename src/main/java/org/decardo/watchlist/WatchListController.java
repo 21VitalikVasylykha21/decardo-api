@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 
 @CrossOrigin
 @RestController
-@RequestMapping("api/v1/watch/list")
+@RequestMapping("api/v1/favorite")
 public class WatchListController {
 	@Autowired
 	private WatchListService watchListService;
@@ -47,11 +47,11 @@ public class WatchListController {
 				.toList());
 	}
 
-	@PostMapping("/user/{userId}/work/{workId}")
+	@PostMapping("/user/{userId}/art/{artId}")
 	public CustomResponse create(@PathVariable Long userId,
-								 @PathVariable Long workId) {
+								 @PathVariable Long artId) {
 		try {
-			WatchList watchList = watchListService.save(userId, workId);
+			WatchList watchList = watchListService.save(userId, artId);
 			return new ListObjectResponse<>(Stream.of(watchList)
 					.map(watchListMapper::convertWithoutUser)
 					.toList());
@@ -60,10 +60,10 @@ public class WatchListController {
 		}
 	}
 
-	@DeleteMapping("/user/{userId}/work/{workId}")
+	@DeleteMapping("/user/{userId}/art/{artId}")
 	public MessageResponse delete(@PathVariable Long userId,
-								  @PathVariable Long workId) {
-		watchListService.delete(userId, workId);
+								  @PathVariable Long artId) {
+		watchListService.delete(userId, artId);
 		return new MessageResponse<>("Reference successfully removed");
 	}
 }

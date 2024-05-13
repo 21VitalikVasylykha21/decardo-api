@@ -2,7 +2,7 @@ package org.decardo.exception;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 public class ValidationException extends RuntimeException {

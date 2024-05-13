@@ -1,7 +1,6 @@
 package org.decardo.user;
 
 import jakarta.validation.ConstraintViolation;
-import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -9,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.decardo.exception.EntityNotFoundException;
 import org.decardo.exception.ExistObjectException;
 import org.decardo.exception.ValidationException;
+import org.decardo.firebase.FirebaseStorageService;
 import org.decardo.security.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -41,6 +41,9 @@ public class UserService {
 
 	@Autowired
 	private JwtUtils jwtUtils;
+
+	@Autowired
+	private FirebaseStorageService firebaseStorageService;
 
 	public User findByUsername(String username) {
 		Optional<User> user = userRepository.findByUsername(username);
@@ -75,7 +78,7 @@ public class UserService {
 		return findByUsername(authentication.getName());
 	}
 
-	public User login(@Valid UserDTO userDTO) {
+	public User login(UserDTO userDTO) {
 		validation(userDTO);
 		Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userDTO.getUsername(), userDTO.getPassword()));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -87,7 +90,18 @@ public class UserService {
 				.build();
 	}
 
-	public User signup(@Valid UserDTO userDTO) {
+	public User update(UserUpdateRequestDTO userUpdateRequestDTO) {
+		User user = findById(Long.valueOf(userUpdateRequestDTO.getId()));
+		user.setUsername(userUpdateRequestDTO.getUsername());
+		user.setAvatar(firebaseStorageService.upload(userUpdateRequestDTO.getAvatar()));
+		user.setBanner(firebaseStorageService.upload(userUpdateRequestDTO.getBannerImage()));
+		user.setDetails(userUpdateRequestDTO.getDescription());
+		user.setContact(userUpdateRequestDTO.getContact());
+		userRepository.save(user);
+		return findById(user.getId());
+	}
+
+	public User signup(UserDTO userDTO) {
 		validation(userDTO);
 		if (Boolean.TRUE.equals(userRepository.existsByUsername(userDTO.getUsername()))) {
 			throw new ExistObjectException(User.class, "username");

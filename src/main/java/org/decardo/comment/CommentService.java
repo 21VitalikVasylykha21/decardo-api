@@ -5,18 +5,18 @@ import jakarta.validation.ConstraintViolation;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import org.decardo.art.Art;
 import org.decardo.exception.EntityNotFoundException;
 import org.decardo.exception.ValidationException;
 import org.decardo.user.User;
 import org.decardo.user.UserService;
-import org.decardo.worker.Work;
-import org.decardo.worker.WorkService;
+import org.decardo.art.ArtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 
@@ -35,7 +35,7 @@ public class CommentService {
 	private UserService userService;
 
 	@Autowired
-	private WorkService workService;
+	private ArtService artService;
 
 	public List<Comment> findAll() {
 		return commentRepository.findAll();
@@ -45,8 +45,8 @@ public class CommentService {
 		return commentRepository.findByUserId(userId);
 	}
 
-	public List<Comment> findByWorkId(Long workId) {
-		return commentRepository.findByWorkId(workId);
+	public List<Comment> findByArtId(Long artId) {
+		return commentRepository.findByArtId(artId);
 	}
 
 	public Comment findById(Long id) {
@@ -61,8 +61,8 @@ public class CommentService {
 	public Comment create(CommentDTO commentDTO) {
 		validation(commentDTO);
 		User user = userService.findById(Long.valueOf(commentDTO.getUserId()));
-		Work work = workService.findById(Long.valueOf(commentDTO.getWorkId()));
-		Comment comment = commentMapper.convert(commentDTO, user, work);
+		Art art = artService.findById(Long.valueOf(commentDTO.getArtId()));
+		Comment comment = commentMapper.convert(commentDTO, user, art);
 		return commentRepository.save(comment);
 	}
 

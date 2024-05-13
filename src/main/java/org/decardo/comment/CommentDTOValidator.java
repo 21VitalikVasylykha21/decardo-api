@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/02
  */
 

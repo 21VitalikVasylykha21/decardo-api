@@ -1,13 +1,13 @@
 package org.decardo.watchlist;
 
 import org.decardo.user.UserMapper;
-import org.decardo.worker.WorkMapper;
+import org.decardo.art.ArtMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 
@@ -17,18 +17,18 @@ public class WatchListMapper {
 	private UserMapper userMapper;
 
 	@Autowired
-	private WorkMapper workMapper;
+	private ArtMapper artMapper;
 
 	public WatchListDTO convert(WatchList watchList) {
 		return WatchListDTO.builder()
-				.work(workMapper.convert(watchList.getWork()))
+				.art(artMapper.convert(watchList.getArt()))
 				.user(userMapper.convert(watchList.getUser()))
 				.build();
 	}
 
 	public WatchListWithoutUserDTO convertWithoutUser(WatchList watchList) {
 		return WatchListWithoutUserDTO.builder()
-				.work(workMapper.convert(watchList.getWork()))
+				.art(artMapper.convert(watchList.getArt()))
 				.build();
 	}
 }

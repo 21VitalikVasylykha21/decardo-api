@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 
@@ -24,6 +24,6 @@ public class RatingId implements Serializable {
 	@Column(name = "user_id")
 	private Long userId;
 
-	@Column(name = "work_id")
-	private Long workId;
+	@Column(name = "art_id")
+	private Long artId;
 }

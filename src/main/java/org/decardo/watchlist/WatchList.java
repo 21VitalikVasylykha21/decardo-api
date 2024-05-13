@@ -12,11 +12,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.decardo.user.User;
-import org.decardo.worker.Work;
+import org.decardo.art.Art;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 
@@ -38,7 +38,7 @@ public class WatchList {
 
 	@NotNull
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-	@JoinColumn(name = "work_id", referencedColumnName = "id", insertable = false, updatable = false)
-	private Work work;
+	@JoinColumn(name = "art_id", referencedColumnName = "id", insertable = false, updatable = false)
+	private Art art;
 }
 

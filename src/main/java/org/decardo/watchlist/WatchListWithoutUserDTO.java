@@ -2,15 +2,15 @@ package org.decardo.watchlist;
 
 import lombok.Builder;
 import lombok.Getter;
-import org.decardo.worker.WorkResponseDTO;
+import org.decardo.art.ArtResponseDTO;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 @Getter
 @Builder
 public class WatchListWithoutUserDTO {
-	public WorkResponseDTO work;
+	public ArtResponseDTO art;
 }

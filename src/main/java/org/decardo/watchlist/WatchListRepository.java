@@ -6,13 +6,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 public interface WatchListRepository extends JpaRepository<WatchList, WatchListId> {
 	List<WatchList> findByUserId(Long userId);
 
-	Optional<WatchList> findByUserIdAndWorkId(Long userId, Long workId);
+	Optional<WatchList> findByUserIdAndArtId(Long userId, Long artId);
 
-	void deleteByUserIdAndWorkId(Long userId, Long workId);
+	void deleteByUserIdAndArtId(Long userId, Long artId);
 }

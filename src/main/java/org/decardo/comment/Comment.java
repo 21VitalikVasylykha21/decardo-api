@@ -18,7 +18,7 @@ import org.decardo.util.DateUtils;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 
@@ -39,8 +39,8 @@ public class Comment {
 	private Long userId;
 
 	@NotNull
-	@Column(name = "work_id")
-	private Long workId;
+	@Column(name = "art_id")
+	private Long artId;
 
 	@NotBlank
 	private String comment;

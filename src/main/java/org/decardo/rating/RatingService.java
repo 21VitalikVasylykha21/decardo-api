@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/02
  */
 @Service
@@ -13,8 +13,8 @@ public class RatingService {
 	@Autowired
 	private RatingRepository ratingRepository;
 
-	public Double findRatingByWorkId(Long workId) {
-		Double rating = ratingRepository.getAverageRatingByWorkId(workId);
+	public Double findRatingByArtId(Long artId) {
+		Double rating = ratingRepository.getAverageRatingByArtId(artId);
 		return rating == null ? 0D : rating;
 	}
 }

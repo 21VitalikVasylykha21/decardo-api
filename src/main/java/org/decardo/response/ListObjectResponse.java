@@ -19,7 +19,12 @@ public class ListObjectResponse<T> implements CustomResponse {
 		this.status = status;
 		this.result = result;
 		this.total = (long) result.size();
+	}
 
+	public ListObjectResponse(Long total, List<T> result) {
+		this.status = HttpStatus.OK.value();
+		this.result = result;
+		this.total = total;
 	}
 
 	public ListObjectResponse(List<T> result) {

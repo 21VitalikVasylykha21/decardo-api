@@ -6,18 +6,21 @@ import org.decardo.response.MessageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/03/31
  */
 
@@ -30,7 +33,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@PostMapping("/auth/login")
+	@PostMapping("/login")
 	public ResponseEntity login(@RequestBody UserDTO userDTO) {
 		try {
 			User user = userService.login(userDTO);
@@ -44,7 +47,7 @@ public class UserController {
 		}
 	}
 
-	@PostMapping("/auth/signup")
+	@PostMapping("/register")
 	public ResponseEntity signup(@RequestBody UserDTO userDTO) {
 		try {
 			User user = userService.signup(userDTO);
@@ -58,12 +61,24 @@ public class UserController {
 		}
 	}
 
-	@PostMapping("/auth/logout")
+	@PostMapping("/logout")
 	public ResponseEntity<?> logout() {
 		String jwt = userService.cleanJwt();
 		return ResponseEntity.ok()
 				.header(HttpHeaders.SET_COOKIE, jwt)
 				.body(new MessageResponse<>("Successfully logged out"));
+	}
+
+	@PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+	public ResponseEntity<?> update(@ModelAttribute UserUpdateRequestDTO userUpdateRequestDTO) {
+		try {
+			User user = userService.update(userUpdateRequestDTO);
+			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user)));
+			return org.springframework.http.ResponseEntity.ok().body(response);
+		} catch (Exception e) {
+			return org.springframework.http.ResponseEntity.badRequest()
+					.body(new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage()));
+		}
 	}
 
 	@GetMapping

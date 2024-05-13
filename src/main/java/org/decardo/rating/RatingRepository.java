@@ -5,10 +5,14 @@ import org.springframework.data.jpa.repository.Query;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/02
  */
 public interface RatingRepository extends JpaRepository<Rating, RatingId> {
-	@Query(value = "SELECT AVG(rating) FROM \"RATING\" WHERE WORK_ID = :workId", nativeQuery = true)
-	Double getAverageRatingByWorkId(Long workId);
+	@Query(value = """
+			SELECT AVG(rating)
+			FROM "RATING"
+			WHERE art_id = :artId
+			""", nativeQuery = true)
+	Double getAverageRatingByArtId(Long artId);
 }

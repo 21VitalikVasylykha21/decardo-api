@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/02
  */
 
@@ -62,9 +62,9 @@ public class CommentController {
 		}
 	}
 
-	@GetMapping("/work/{workId}")
-	public ListObjectResponse<CommentDTO> findByWorkId(@PathVariable Long workId) {
-		List<Comment> comments = commentService.findByWorkId(workId);
+	@GetMapping("/work/{artId}")
+	public ListObjectResponse<CommentDTO> findByArtId(@PathVariable Long artId) {
+		List<Comment> comments = commentService.findByArtId(artId);
 		return new ListObjectResponse<>(comments.stream()
 				.map(commentMapper::convert)
 				.toList());

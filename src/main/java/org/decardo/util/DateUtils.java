@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/02
  */
 public class DateUtils {

@@ -7,7 +7,7 @@ import lombok.Getter;
 
 /**
  * @author Vitalii Vasylykha
- * @company Chainfulness
+ * @company UzhNU
  * @since 2024/04/01
  */
 
@@ -19,7 +19,7 @@ public class CommentDTO {
 	@NotNull
 	private String userId;
 	@NotNull
-	private String workId;
+	private String artId;
 	@NotBlank
 	private String comment;
 	private String date;
