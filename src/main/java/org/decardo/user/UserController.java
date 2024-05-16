@@ -1,6 +1,8 @@
 package org.decardo.user;
 
 import java.util.List;
+import java.util.stream.Stream;
+import org.decardo.response.CustomResponse;
 import org.decardo.response.ListObjectResponse;
 import org.decardo.response.MessageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +10,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -82,16 +85,30 @@ public class UserController {
 	}
 
 	@GetMapping
-	public ListObjectResponse<UserDTO> findAll() {
-		return new ListObjectResponse<>(
-				userService.findAll().stream()
-						.map(userMapper::convert)
-						.toList());
+	public CustomResponse findByJwt() {
+		try {
+			return new ListObjectResponse<>(Stream.of(userService.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName()))
+					.map(userMapper::convert)
+					.toList());
+		} catch (Exception e) {
+			return new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage());
+		}
 	}
 
 	@DeleteMapping("/{userId}")
 	public MessageResponse delete(@PathVariable Long userId) {
 		userService.delete(userId);
 		return new MessageResponse<>("User successfully removed");
+	}
+
+	@GetMapping("/{username}")
+	public CustomResponse findByName(@PathVariable String username) {
+		try {
+			return new ListObjectResponse<>(Stream.of(userService.findByUsername(username))
+					.map(userMapper::convert)
+					.toList());
+		} catch (Exception e) {
+			return new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage());
+		}
 	}
 }
