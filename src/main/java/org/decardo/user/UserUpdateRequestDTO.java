@@ -1,6 +1,7 @@
 package org.decardo.user;
 
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
 import lombok.Getter;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -11,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
  */
 
 @Getter
+@Builder
 public class UserUpdateRequestDTO {
 
 	private String id;

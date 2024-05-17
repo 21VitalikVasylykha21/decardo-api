@@ -25,10 +25,10 @@ public class ArtInputDTO {
 	@NotBlank
 	private String owner;
 	@NotBlank
-	@Size(min = 3, max = 3)
+	@Size(min = 3, max = 4)
 	private String format;
 	@NotBlank
-	@Size(min = 7, max = 7)
+	@Size(min = 3, max = 7)
 	private String backgroundColor;
 	@NotBlank
 	private String ambientLightIntensity;
@@ -37,7 +37,7 @@ public class ArtInputDTO {
 	@NotBlank
 	private String hemisphereLightIntensity;
 	@NotBlank
-	@Size(min = 7, max = 7)
+	@Size(min = 3, max = 7)
 	private String hemisphereLightGroundColor;
 	@NotNull
 	private MultipartFile model;

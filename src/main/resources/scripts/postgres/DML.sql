@@ -12,11 +12,11 @@ VALUES
 
 INSERT INTO "MODEL" (FILE, FORMAT, PREVIEW, BACKGROUND_COLOR, AMBIENT_LIGHT_INTENSITY, DIRECTIONAL_LIGHT_INTENSITY, HEMISPHERE_LIGHT_INTENSITY,
                      HEMISPHERE_LIGHT_GROUND_COLOR)
-VALUES ('model1.obj', 'obj', 'preview1.jpg', '#FFFFFF', 0.5, 0.8, 0.3, '#CCCCCC'),
-       ('model2.fbx', 'fbx', 'preview2.jpg', '#000000', 0.3, 0.7, 0.4, '#AAAAAA'),
-       ('model3.obj', 'obj', 'preview3.jpg', '#FFFFFF', 0.6, 0.9, 0.4, '#CCCCCC'),
-       ('model4.gltf', 'gltf', 'preview4.jpg', '#000000', 0.4, 0.6, 0.5, '#AAAAAA'),
-       ('model5.obj', 'obj', 'preview5.jpg', '#FFFFFF', 0.7, 0.8, 0.5, '#CCCCCC');
+VALUES ('https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/183cbfdb-a40e-487a-a3be-ff4969fdf91e.fbx?alt=media', 'fbx', 'https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/0abe1cc1-68ca-4763-92b6-ea58a401ac1f.jpg?alt=media', '#FFFFFF', 0.5, 0.8, 0.3, '#CCCCCC'),
+       ('https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/183cbfdb-a40e-487a-a3be-ff4969fdf91e.fbx?alt=media', 'fbx', 'https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/0abe1cc1-68ca-4763-92b6-ea58a401ac1f.jpg?alt=media', '#000000', 0.3, 0.7, 0.4, '#AAAAAA'),
+       ('https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/183cbfdb-a40e-487a-a3be-ff4969fdf91e.fbx?alt=media', 'fbx', 'https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/0abe1cc1-68ca-4763-92b6-ea58a401ac1f.jpg?alt=media', '#FFFFFF', 0.6, 0.9, 0.4, '#CCCCCC'),
+       ('https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/183cbfdb-a40e-487a-a3be-ff4969fdf91e.fbx?alt=media', 'fbx', 'https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/0abe1cc1-68ca-4763-92b6-ea58a401ac1f.jpg?alt=media', '#000000', 0.4, 0.6, 0.5, '#AAAAAA'),
+       ('https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/183cbfdb-a40e-487a-a3be-ff4969fdf91e.fbx?alt=media', 'fbx', 'https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/0abe1cc1-68ca-4763-92b6-ea58a401ac1f.jpg?alt=media', '#FFFFFF', 0.7, 0.8, 0.5, '#CCCCCC');
 
 INSERT INTO "ART" (TITLE, MODEL_ID, AUTHOR_ID, DESCRIPTION, TAG)
 VALUES ('Art 1', 1, 1, 'Description for Art 1', ARRAY ['tag1', 'tag2']),
