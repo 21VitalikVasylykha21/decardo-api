@@ -26,7 +26,7 @@
   Endpoint
 </p>
 
-Посилання на swagger [{baseUrl}/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/)
+Посилання на swagger [{baseUrl}/swagger-ui/index.html#/](https://decardo-api-24dcba8421a2.herokuapp.com/swagger-ui/index.html#/)
 
 <p align="center" style="font-size: 50px; font-weight: bold">
   Опис схеми бази даних
