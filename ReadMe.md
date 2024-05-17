@@ -1,5 +1,5 @@
 <p align="center" style="font-size: 50px; font-weight: bold">
-  Decardo
+  Decardo API
 </p>
 
 <p align="center" style="font-size: 35px; font-weight: bold">
@@ -29,79 +29,100 @@
 Посилання на swagger [{baseUrl}/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/)
 
 <p align="center" style="font-size: 50px; font-weight: bold">
-  База даних
-</p>
-
-<p align="center" style="font-size: 35px; font-weight: bold">
-  Структура таблиць
+  Опис схеми бази даних
 </p>
 
 <p align="center" style="font-size: 25px; font-weight: bold">
   Таблиця "USER"
 </p>
 
-Таблиця "USER" містить інформацію про користувачів системи.
+Таблиця `USER` зберігає інформацію про користувачів.
 
-| Стовпець | Тип          | Опис                                                 |
-|----------|--------------|------------------------------------------------------|
-| ID       | SERIAL       | Унікальний ідентифікатор користувача                 |
-| USERNAME | VARCHAR(255) | Ім'я користувача                                     |
-| PASSWORD | VARCHAR(255) | Пароль користувача                                   |
-| EMAIL    | VARCHAR(255) | Адреса електронної пошти користувача (необов'язково) |
-| ROLE     | VARCHAR(5)   | Роль користувача в системі (за замовчуванням 'user') |
-| DETAILS  | TEXT         | Додаткові деталі про користувача                     |
+| Колонка  | Тип          | Обмеження                                                   | Опис                                            |
+|----------|--------------|-------------------------------------------------------------|-------------------------------------------------|
+| ID       | SERIAL       | PRIMARY KEY                                                 | Унікальний ідентифікатор користувача            |
+| USERNAME | VARCHAR(255) | NOT NULL, UNIQUE                                            | Ім'я користувача                                |
+| PASSWORD | VARCHAR(255) | NOT NULL                                                    | Пароль користувача                              |
+| EMAIL    | VARCHAR(255) | NOT NULL, UNIQUE                                            | Email адреса користувача                        |
+| ROLE     | VARCHAR(5)   | NOT NULL, DEFAULT 'USER', CHECK (ROLE IN ('USER', 'ADMIN')) | Роль користувача (може бути 'USER' або 'ADMIN') |
+| DETAILS  | TEXT         | NULL                                                        | Додаткова інформація про користувача            |
+| AVATAR   | TEXT         | NULL                                                        | URL до аватару користувача                      |
+| BANNER   | TEXT         | NULL                                                        | URL до банера користувача                       |
+| CONTACT  | TEXT         | NULL                                                        | Контактна інформація користувача                |
 
 <p align="center" style="font-size: 25px; font-weight: bold">
-  Таблиця "WORK"
+  Таблиця "MODEL"
 </p>
 
-Таблиця "WORK" містить інформацію про роботи в системі.
+Таблиця `MODEL` зберігає інформацію про 3D моделі.
 
-| Стовпець    | Тип          | Опис                                   |
-|-------------|--------------|----------------------------------------|
-| ID          | SERIAL       | Унікальний ідентифікатор роботи        |
-| TITLE       | VARCHAR(255) | Назва роботи                           |
-| AUTHOR_ID   | INT          | Унікальний ідентифікатор автора роботи |
-| DESCRIPTION | TEXT         | Опис роботи                            |
-| CREATE_DATE | TIMESTAMP    | Дата та час створення роботи           |
-| FILE_URL    | VARCHAR(255) | URL-адреса файлу з роботою             |
+| Колонка                       | Тип        | Обмеження                                                                | Опис                                                      |
+|-------------------------------|------------|--------------------------------------------------------------------------|-----------------------------------------------------------|
+| ID                            | SERIAL     | PRIMARY KEY                                                              | Унікальний ідентифікатор моделі                           |
+| FILE                          | TEXT       | NOT NULL                                                                 | Шлях до файлу або URL моделі                              |
+| FORMAT                        | VARCHAR(5) | NOT NULL, DEFAULT 'obj', CHECK (FORMAT IN ('fbx', 'glb', 'gltf', 'obj')) | Формат файлу моделі                                       |
+| PREVIEW                       | TEXT       | NOT NULL                                                                 | URL до прев'ю зображення моделі                           |
+| BACKGROUND_COLOR              | VARCHAR(7) | NOT NULL                                                                 | Колір фону в шістнадцятковому форматі                     |
+| AMBIENT_LIGHT_INTENSITY       | DECIMAL    | NOT NULL                                                                 | Інтенсивність навколишнього світла                        |
+| DIRECTIONAL_LIGHT_INTENSITY   | DECIMAL    | NOT NULL                                                                 | Інтенсивність направленого світла                         |
+| HEMISPHERE_LIGHT_INTENSITY    | DECIMAL    | NOT NULL                                                                 | Інтенсивність гемуферного світла                          |
+| HEMISPHERE_LIGHT_GROUND_COLOR | VARCHAR(7) | NOT NULL                                                                 | Колір землі гемуферного світла в шістнадцятковому форматі |
+
+<p align="center" style="font-size: 25px; font-weight: bold">
+  Таблиця "ART"
+</p>
+
+Таблиця `ART` зберігає інформацію про твори мистецтва.
+
+| Колонка     | Тип        | Обмеження                                                | Опис                                     |
+|-------------|------------|----------------------------------------------------------|------------------------------------------|
+| ID          | SERIAL     | PRIMARY KEY                                              | Унікальний ідентифікатор твору мистецтва |
+| TITLE       | TEXT       | NOT NULL                                                 | Назва твору мистецтва                    |
+| MODEL_ID    | INT        | NOT NULL, FOREIGN KEY (MODEL_ID) REFERENCES "MODEL" (ID) | Ідентифікатор асоційованої моделі        |
+| AUTHOR_ID   | INT        | NOT NULL, FOREIGN KEY (AUTHOR_ID) REFERENCES "USER" (ID) | Ідентифікатор автора (користувача)       |
+| DESCRIPTION | TEXT       | NOT NULL                                                 | Опис твору мистецтва                     |
+| CREATE_DATE | TIMESTAMP  | DEFAULT CURRENT_TIMESTAMP, NOT NULL                      | Дата та час створення твору мистецтва    |
+| TAG         | TEXT ARRAY | NULL                                                     | Теги, пов'язані з твором мистецтва       |
 
 <p align="center" style="font-size: 25px; font-weight: bold">
   Таблиця "WATCHLIST"
 </p>
 
-Таблиця "WATCHLIST" відображає список для перегляду користувачів.
+Таблиця `WATCHLIST` зберігає інформацію про списки відстеження користувачів.
 
-| Стовпець | Тип | Опис                                 |
-|----------|-----|--------------------------------------|
-| WORK_ID  | INT | Унікальний ідентифікатор роботи      |
-| USER_ID  | INT | Унікальний ідентифікатор користувача |
+| Колонка                       | Тип | Обмеження                                              | Опис                                                         |
+|-------------------------------|-----|--------------------------------------------------------|--------------------------------------------------------------|
+| ART_ID                        | INT | NOT NULL, FOREIGN KEY (ART_ID) REFERENCES "ART" (ID)   | Ідентифікатор твору мистецтва                                |
+| USER_ID                       | INT | NOT NULL, FOREIGN KEY (USER_ID) REFERENCES "USER" (ID) | Ідентифікатор користувача                                    |
+| PRIMARY KEY (ART_ID, USER_ID) |     |                                                        | Складовий первинний ключ, що складається з ART_ID та USER_ID |
 
 <p align="center" style="font-size: 25px; font-weight: bold">
   Таблиця "COMMENT"
 </p>
 
-Таблиця "COMMENT" зберігає коментарі користувачів до робіт.
+Таблиця `COMMENT` зберігає коментарі, зроблені користувачами до творів мистецтва.
 
-| Стовпець    | Тип       | Опис                                 |
-|-------------|-----------|--------------------------------------|
-| WORK_ID     | INT       | Унікальний ідентифікатор роботи      |
-| USER_ID     | INT       | Унікальний ідентифікатор користувача |
-| COMMENT     | TEXT      | Текст коментаря                      |
-| CREATE_DATE | TIMESTAMP | Дата та час створення коментаря      |
+| Колонка     | Тип       | Обмеження                                              | Опис                                           |
+|-------------|-----------|--------------------------------------------------------|------------------------------------------------|
+| ID          | SERIAL    | PRIMARY KEY                                            | Унікальний ідентифікатор коментаря             |
+| ART_ID      | INT       | NOT NULL, FOREIGN KEY (ART_ID) REFERENCES "ART" (ID)   | Ідентифікатор пов'язаного твору мистецтва      |
+| USER_ID     | INT       | NOT NULL, FOREIGN KEY (USER_ID) REFERENCES "USER" (ID) | Ідентифікатор користувача, що залишив коментар |
+| COMMENT     | TEXT      | NOT NULL                                               | Зміст коментаря                                |
+| CREATE_DATE | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP, NOT NULL                    | Дата та час створення коментаря                |
 
 <p align="center" style="font-size: 25px; font-weight: bold">
   Таблиця "RATING"
 </p>
 
-Таблиця "RATING" відображає рейтинги користувачів для робіт.
+Таблиця `RATING` зберігає оцінки, надані користувачами творам мистецтва.
 
-| Стовпець    | Тип       | Опис                                 |
-|-------------|-----------|--------------------------------------|
-| WORK_ID     | INT       | Унікальний ідентифікатор роботи      |
-| USER_ID     | INT       | Унікальний ідентифікатор користувача |
-| RATING      | INT       | Оцінка, яку поставив користувач      |
-| CREATE_DATE | TIMESTAMP | Дата та час створення оцінки         |
+| Колонка                       | Тип       | Обмеження                                              | Опис                                                         |
+|-------------------------------|-----------|--------------------------------------------------------|--------------------------------------------------------------|
+| ART_ID                        | INT       | NOT NULL, FOREIGN KEY (ART_ID) REFERENCES "ART" (ID)   | Ідентифікатор оцінюваного твору мистецтва                    |
+| USER_ID                       | INT       | NOT NULL, FOREIGN KEY (USER_ID) REFERENCES "USER" (ID) | Ідентифікатор користувача, що надав оцінку                   |
+| RATING                        | INT       | NOT NULL                                               | Значення оцінки, наданої користувачем                        |
+| CREATE_DATE                   | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP, NOT NULL                    | Дата та час надання оцінки                                   |
+| PRIMARY KEY (ART_ID, USER_ID) |           |                                                        | Складовий первинний ключ, що складається з ART_ID та USER_ID |
 
 <p align="center" style="font-size: 25px; font-weight: bold">
   ER діаграма
@@ -110,243 +131,3 @@
 <p align="center">
   <img style="height: 600px; width: 1100px" alt="ER diagrams" src="diagrams/png/ER-diagram.png" />
 </p>
-
-<p align="center" style="font-size: 35px; font-weight: bold">
-  Запити до модулю 1
-</p>
-
-<p align="center" style="font-size: 20px; font-weight: bold">
-  Прості запити
-</p>
-
-1) Вибрати всі роботи (заголовки та описи)
-
-```sql
-SELECT TITLE, DESCRIPTION
-FROM "WORK";
-```
-
-2) Вибрати всіх користувачів з їхніми ролями
-
-```sql
-SELECT USERNAME, ROLE
-FROM "USER";
-```
-
-3) Вибрати всі коментарі для конкретної роботи.
-
-```sql
-SELECT COMMENT
-FROM "COMMENT"
-WHERE WORK_ID = 1;
-```
-
-4) Вибрати всі роботи, які були створені після певної дати.
-
-```sql
-SELECT TITLE
-FROM "WORK"
-WHERE CREATE_DATE > '2024-03-01';
-```
-
-5) Вибрати всі рейтинги для певного користувача.
-
-```sql
-SELECT RATING
-FROM "RATING"
-WHERE USER_ID = 1;
-```
-
-<p align="center" style="font-size: 20px; font-weight: bold">
-  Агрегатні функції
-</p>
-
-1) Знайти кількість робіт у базі
-
-```sql
-SELECT COUNT(*)
-FROM "WORK";
-```
-
-2) Знайти середній рейтинг усіх робіт
-
-```sql
-SELECT AVG(RATING)
-FROM "RATING";
-```
-
-3) Знайти максимальну кількість коментарів для роботи.
-
-```sql
-SELECT MAX(CNT)
-FROM (SELECT COUNT(*) AS CNT
-      FROM "COMMENT"
-      GROUP BY WORK_ID) AS SUBQUERY;
-```
-
-4) Знайти мінімальний рейтинг для кожної роботи
-
-```sql
-SELECT WORK_ID, MIN(RATING)
-FROM "RATING"
-GROUP BY WORK_ID;
-```
-
-5) Знайти загальну кількість робіт, які зберігаються у відстежуванні для кожного користувача.
-
-```sql
-SELECT USER_ID, COUNT(*)
-FROM "WATCHLIST"
-GROUP BY USER_ID;
-```
-
-<p align="center" style="font-size: 20px; font-weight: bold">
-  Запити з групуванням
-</p>
-
-1) Знайти кількість робіт, які створив кожний користувач
-
-```sql
-SELECT U.USERNAME, COUNT(*)
-FROM "WORK" W
-         JOIN "USER" U ON W.AUTHOR_ID = U.ID
-GROUP BY U.USERNAME;
-```
-
-2) Знайти середній рейтинг усіх робіт
-
-```sql
-SELECT WORK_ID, AVG(RATING)
-FROM "RATING"
-GROUP BY WORK_ID;
-```
-
-3) Знайти кількість коментарів для кожного користувача
-
-```sql
-SELECT USER_ID, COUNT(*)
-FROM "COMMENT"
-GROUP BY USER_ID;
-```
-
-4) Знайти середню кількість робіт, які додані до відстежування кожним користувачем
-
-```sql
-SELECT USER_ID, AVG(CNT)
-FROM (SELECT USER_ID, COUNT(*) AS CNT
-      FROM "WATCHLIST"
-      GROUP BY USER_ID) AS SUBQUERY
-GROUP BY USER_ID;
-```
-
-5) Знайти загальну кількість коментарів для кожної роботи
-
-```sql
-SELECT WORK_ID, COUNT(*)
-FROM "COMMENT"
-GROUP BY WORK_ID;
-```
-
-<p align="center" style="font-size: 20px; font-weight: bold">
-  Вкладені запити
-</p>
-
-1) Знайти всі роботи, до яких є коментарі
-
-```sql
-SELECT *
-FROM "WORK"
-WHERE ID IN (SELECT DISTINCT WORK_ID FROM "COMMENT");
-```
-
-2) Знайти всіх користувачів, які залишили коментарі до робіт, які вони самі створили
-
-```sql
-SELECT U.*
-FROM "USER" U
-         JOIN "COMMENT" C ON U.ID = C.USER_ID
-         JOIN "WORK" W ON C.WORK_ID = W.ID AND W.AUTHOR_ID = U.ID;
-```
-
-3) Знайти всі роботи, які знаходяться у відстежуванні користувача з найбільшим ID
-
-```sql
-SELECT *
-FROM "WORK"
-WHERE ID IN (SELECT WORK_ID FROM "WATCHLIST" WHERE USER_ID = (SELECT MAX(ID) FROM "USER"));
-```
-
-4) Знайти всі роботи, які мають рейтинг 5 і в них є коментарі.
-
-```sql
-SELECT *
-FROM "WORK"
-WHERE ID IN (
-    SELECT WORK_ID
-    FROM "RATING"
-    WHERE RATING = 5
-) AND ID IN (
-    SELECT DISTINCT WORK_ID
-    FROM "COMMENT"
-);
-```
-
-5) Знайти всіх користувачів, які залишили коментарі до робіт, які знаходяться у відстежуванні користувача з роллю 'admin'
-```sql
-SELECT DISTINCT u.*
-FROM "USER" u
-         JOIN "COMMENT" c ON u.ID = c.USER_ID
-         JOIN "WATCHLIST" w ON c.WORK_ID = w.WORK_ID
-         JOIN "USER" u_admin ON w.USER_ID = u_admin.ID AND u_admin.ROLE = 'admin';
-```
-
-<p align="center" style="font-size: 20px; font-weight: bold">
-  Багатотабличні запити
-</p>
-
-1) Знайти всі роботи, що містяться у відстежуванні користувача з певною ролью
-
-```sql
-SELECT w.*
-FROM "WORK" w
-         JOIN "WATCHLIST" wl ON w.ID = wl.WORK_ID
-         JOIN "USER" u ON wl.USER_ID = u.ID AND u.ROLE = 'admin';
-```
-
-2) Знайти всі коментарі для робіт, що містяться у відстежуванні користувача з певною ролью
-
-```sql
-SELECT c.*
-FROM "COMMENT" c
-         JOIN "WORK" w ON c.WORK_ID = w.ID
-         JOIN "WATCHLIST" wl ON w.ID = wl.WORK_ID
-         JOIN "USER" u ON wl.USER_ID = u.ID AND u.ROLE = 'admin';
-```
-
-3) Знайти всі рейтинги для робіт, що мають коментарі від користувачів з певною ролью.
-
-```sql
-SELECT r.*
-FROM "RATING" r
-         JOIN "WORK" w ON r.WORK_ID = w.ID
-         JOIN "COMMENT" c ON w.ID = c.WORK_ID
-         JOIN "USER" u ON c.USER_ID = u.ID AND u.ROLE = 'admin';
-```
-
-4) Знайти всі рейтинги для робіт, які знаходяться у відстежуванні користувача з певною ролью
-
-```sql
-SELECT r.*
-FROM "RATING" r
-         JOIN "WATCHLIST" wl ON r.WORK_ID = wl.WORK_ID
-         JOIN "USER" u ON wl.USER_ID = u.ID AND u.ROLE = 'admin';
-```
-
-5) Знайти всі коментарі та рейтинги для робіт, що мають описи, що починаються з певної літери
-```sql
-SELECT c.*, r.*
-FROM "COMMENT" c
-         JOIN "RATING" r ON c.WORK_ID = r.WORK_ID
-         JOIN "WORK" w ON c.WORK_ID = w.ID
-WHERE LEFT(w.DESCRIPTION, 1) = 'D';
-```
