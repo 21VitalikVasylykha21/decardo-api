@@ -6,40 +6,44 @@ import com.google.cloud.storage.BlobId;
 import com.google.cloud.storage.BlobInfo;
 import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.StorageOptions;
+import jakarta.annotation.PostConstruct;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.UUID;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author Vitalii Vasylykha
- * @company UzhNU 
+ * @company UzhNU
  * @since 2024/05/08
  */
 @Slf4j
 @Service
 public class FirebaseStorageService {
 	private static final String BUCKET_NAME = "nazaret-church-goods.appspot.com";
-	private static final String FIREBASE_KEY = "firebase-private-key.json";
 	private static final String DOWNLOAD_URL = "https://firebasestorage.googleapis.com/v0/b/%s/o/%s?alt=media";
 	private static final String EMPTY_IMAGE_URL = "https://firebasestorage.googleapis.com/v0/b/nazaret-church-goods.appspot.com/o/281f8cda-a580-4fb5-aaec-15546eb699ea.png?alt=media";
+	@Value("${firebase.config.json}")
+	private String firebaseConfigJson;
 	private Storage storage;
 
-	public FirebaseStorageService() {
+	@PostConstruct
+	public void init() {
 		try {
-			InputStream inputStream = FirebaseStorageService.class.getClassLoader().getResourceAsStream(FIREBASE_KEY);
-			if (inputStream == null) {
-				log.error("Failed init firebase storage, not find firebase key");
+			if (firebaseConfigJson == null) {
+				log.error("Failed init firebase storage, environment variable FIREBASE_CONFIG is not set.");
 				return;
 			}
-			Credentials credentials = GoogleCredentials.fromStream(inputStream);
+			ByteArrayInputStream serviceAccountStream = new ByteArrayInputStream(firebaseConfigJson.getBytes(StandardCharsets.UTF_8));
+			Credentials credentials = GoogleCredentials.fromStream(serviceAccountStream);
 			storage = StorageOptions.newBuilder().setCredentials(credentials).build().getService();
 		} catch (IOException e) {
 			log.error("Failed init firebase storage", e);
