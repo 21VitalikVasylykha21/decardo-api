@@ -1,5 +1,6 @@
 package org.decardo.user;
 
+import com.google.common.base.Strings;
 import jakarta.validation.ConstraintViolation;
 import java.util.List;
 import java.util.Optional;
@@ -92,11 +93,21 @@ public class UserService {
 
 	public User update(UserUpdateRequestDTO userUpdateRequestDTO) {
 		User user = findById(Long.valueOf(userUpdateRequestDTO.getId()));
-		user.setUsername(userUpdateRequestDTO.getUsername());
-		user.setAvatar(firebaseStorageService.upload(userUpdateRequestDTO.getAvatar()));
-		user.setBanner(firebaseStorageService.upload(userUpdateRequestDTO.getBannerImage()));
-		user.setDetails(userUpdateRequestDTO.getDescription());
-		user.setContact(userUpdateRequestDTO.getContact());
+		if (userUpdateRequestDTO.getAvatar() != null) {
+			user.setAvatar(firebaseStorageService.upload(userUpdateRequestDTO.getAvatar()));
+		}
+		if (userUpdateRequestDTO.getBannerImage() != null) {
+			user.setBanner(firebaseStorageService.upload(userUpdateRequestDTO.getBannerImage()));
+		}
+		if (!Strings.isNullOrEmpty(userUpdateRequestDTO.getUsername())) {
+			user.setUsername(userUpdateRequestDTO.getUsername());
+		}
+		if (!Strings.isNullOrEmpty(userUpdateRequestDTO.getContact())) {
+			user.setContact(userUpdateRequestDTO.getContact());
+		}
+		if (!Strings.isNullOrEmpty(userUpdateRequestDTO.getDescription())) {
+			user.setDetails(userUpdateRequestDTO.getDescription());
+		}
 		userRepository.save(user);
 		return findById(user.getId());
 	}
@@ -118,8 +129,8 @@ public class UserService {
 		return user;
 	}
 
-	public String generateJwt(UserDTO userDTO) {
-		return jwtUtils.generateJwtCookie(userDTO.getUsername()).toString();
+	public String generateJwt(User user) {
+		return jwtUtils.generateJwtCookie(user.getUsername()).toString();
 	}
 
 	public String cleanJwt() {

@@ -41,7 +41,7 @@ public class UserController {
 		try {
 			User user = userService.login(userDTO);
 			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user)));
-			String jwt = userService.generateJwt(userDTO);
+			String jwt = userService.generateJwt(user);
 			return org.springframework.http.ResponseEntity.ok()
 					.header(HttpHeaders.SET_COOKIE, jwt).body(response);
 		} catch (Exception e) {
@@ -55,7 +55,7 @@ public class UserController {
 		try {
 			User user = userService.signup(userDTO);
 			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user)));
-			String jwt = userService.generateJwt(userDTO);
+			String jwt = userService.generateJwt(user);
 			return org.springframework.http.ResponseEntity.ok()
 					.header(HttpHeaders.SET_COOKIE, jwt).body(response);
 		} catch (Exception e) {
@@ -77,7 +77,9 @@ public class UserController {
 		try {
 			User user = userService.update(userUpdateRequestDTO);
 			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user)));
-			return org.springframework.http.ResponseEntity.ok().body(response);
+			String jwt = userService.generateJwt(user);
+			return org.springframework.http.ResponseEntity.ok()
+					.header(HttpHeaders.SET_COOKIE, jwt).body(response);
 		} catch (Exception e) {
 			return org.springframework.http.ResponseEntity.badRequest()
 					.body(new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage()));
