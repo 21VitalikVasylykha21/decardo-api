@@ -51,6 +51,7 @@ public class JwtUtils {
 	public ResponseCookie generateJwtCookie(String username) {
 		String jwt = generateTokenFromUsername(username);
 		return ResponseCookie.from(jwtCookie, jwt)
+				.domain("decardo-front-fqth.vercel.app")
 				.maxAge(MAX_AGE_IN_SECONDS)
 				.sameSite(SAME_SITE)
 				.httpOnly(true)
