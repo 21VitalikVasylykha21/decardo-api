@@ -133,6 +133,10 @@ public class UserService {
 		return jwtUtils.generateJwtCookie(user.getUsername()).toString();
 	}
 
+	public String generateNameJwt(User user) {
+		return jwtUtils.generateTokenFromUsername(user.getUsername());
+	}
+
 	public String cleanJwt() {
 		return jwtUtils.getCleanJwtCookie().toString();
 	}
