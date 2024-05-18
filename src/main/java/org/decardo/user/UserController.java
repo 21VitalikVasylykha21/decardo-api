@@ -37,32 +37,26 @@ public class UserController {
 	private UserService userService;
 
 	@PostMapping("/login")
-	public ResponseEntity login(@RequestBody UserDTO userDTO) {
+	public CustomResponse login(@RequestBody UserDTO userDTO) {
 		try {
 			User user = userService.login(userDTO);
 			String jwtCookie = userService.generateJwt(user);
 			String jwt = userService.generateNameJwt(user);
-			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user, jwt)));
-			return org.springframework.http.ResponseEntity.ok()
-					.header(HttpHeaders.SET_COOKIE, jwtCookie).body(response);
+			return new ListObjectResponse<>(List.of(userMapper.convert(user, jwt)));
 		} catch (Exception e) {
-			return org.springframework.http.ResponseEntity.badRequest()
-					.body(new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage()));
+			return new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage());
 		}
 	}
 
 	@PostMapping("/register")
-	public ResponseEntity signup(@RequestBody UserDTO userDTO) {
+	public CustomResponse signup(@RequestBody UserDTO userDTO) {
 		try {
 			User user = userService.signup(userDTO);
 			String jwtCookie = userService.generateJwt(user);
 			String jwt = userService.generateNameJwt(user);
-			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user, jwt)));
-			return org.springframework.http.ResponseEntity.ok()
-					.header(HttpHeaders.SET_COOKIE, jwtCookie).body(response);
+			return new ListObjectResponse<>(List.of(userMapper.convert(user, jwt)));
 		} catch (Exception e) {
-			return org.springframework.http.ResponseEntity.badRequest()
-					.body(new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage()));
+			return new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage());
 		}
 	}
 
@@ -75,17 +69,14 @@ public class UserController {
 	}
 
 	@PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-	public ResponseEntity<?> update(@ModelAttribute UserUpdateRequestDTO userUpdateRequestDTO) {
+	public CustomResponse update(@ModelAttribute UserUpdateRequestDTO userUpdateRequestDTO) {
 		try {
 			User user = userService.update(userUpdateRequestDTO);
 			String jwtCookie = userService.generateJwt(user);
 			String jwt = userService.generateNameJwt(user);
-			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user, jwt)));
-			return org.springframework.http.ResponseEntity.ok()
-					.header(HttpHeaders.SET_COOKIE, jwtCookie).body(response);
+			return new ListObjectResponse<>(List.of(userMapper.convert(user, jwt)));
 		} catch (Exception e) {
-			return org.springframework.http.ResponseEntity.badRequest()
-					.body(new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage()));
+			return new MessageResponse<>(HttpStatus.BAD_REQUEST, e.getMessage());
 		}
 	}
 
