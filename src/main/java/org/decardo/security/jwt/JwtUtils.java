@@ -50,7 +50,7 @@ public class JwtUtils {
 				.domain("decardo-front-fqth.vercel.app")
 				.maxAge(MAX_AGE_IN_SECONDS)
 				.sameSite(SAME_SITE)
-				.httpOnly(false)
+				.httpOnly(true)
 				.secure(true)
 				.path(PATH)
 				.build();
