@@ -60,6 +60,7 @@ public class JwtUtils {
 				.maxAge(MIN_AGE_IN_SECONDS)
 				.path(PATH)
 				.build();
+
 	}
 
 	public String getUserNameFromJwtToken(String token) {
