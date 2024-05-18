@@ -44,10 +44,13 @@ public class JwtUtils {
 		}
 	}
 
+	public String getJwtFromHeader(HttpServletRequest request) {
+		return request.getHeader(jwtCookie);
+	}
+
 	public ResponseCookie generateJwtCookie(String username) {
 		String jwt = generateTokenFromUsername(username);
 		return ResponseCookie.from(jwtCookie, jwt)
-				.domain("decardo-front-fqth.vercel.app")
 				.maxAge(MAX_AGE_IN_SECONDS)
 				.sameSite(SAME_SITE)
 				.httpOnly(true)
