@@ -19,6 +19,7 @@ import org.decardo.art.ArtResponseDTO;
 @Builder
 public class UserDTO {
 	private String id;
+	private String tokenJwt;
 	private String role;
 	@Email
 	@Size(max = 50)

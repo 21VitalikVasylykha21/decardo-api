@@ -40,8 +40,8 @@ public class UserController {
 	public ResponseEntity login(@RequestBody UserDTO userDTO) {
 		try {
 			User user = userService.login(userDTO);
-			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user)));
 			String jwt = userService.generateJwt(user);
+			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user,jwt)));
 			return org.springframework.http.ResponseEntity.ok()
 					.header(HttpHeaders.SET_COOKIE, jwt).body(response);
 		} catch (Exception e) {
@@ -54,8 +54,8 @@ public class UserController {
 	public ResponseEntity signup(@RequestBody UserDTO userDTO) {
 		try {
 			User user = userService.signup(userDTO);
-			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user)));
 			String jwt = userService.generateJwt(user);
+			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user,jwt)));
 			return org.springframework.http.ResponseEntity.ok()
 					.header(HttpHeaders.SET_COOKIE, jwt).body(response);
 		} catch (Exception e) {
@@ -76,8 +76,8 @@ public class UserController {
 	public ResponseEntity<?> update(@ModelAttribute UserUpdateRequestDTO userUpdateRequestDTO) {
 		try {
 			User user = userService.update(userUpdateRequestDTO);
-			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user)));
 			String jwt = userService.generateJwt(user);
+			ListObjectResponse<UserDTO> response = new ListObjectResponse<>(List.of(userMapper.convert(user,jwt)));
 			return org.springframework.http.ResponseEntity.ok()
 					.header(HttpHeaders.SET_COOKIE, jwt).body(response);
 		} catch (Exception e) {

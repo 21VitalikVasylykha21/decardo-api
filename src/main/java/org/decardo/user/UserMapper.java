@@ -23,6 +23,10 @@ public class UserMapper {
 	private ArtService artService;
 
 	public UserDTO convert(User user) {
+		return convert(user, null);
+	}
+
+	public UserDTO convert(User user, String jwt) {
 		fillArt(user);
 		boolean isMyProfile = SecurityContextHolder.getContext().getAuthentication().getName().equals(user.getUsername());
 		return UserDTO.builder()
@@ -42,6 +46,7 @@ public class UserMapper {
 						.map(WatchList::getArt)
 						.map(artMapper::convert)
 						.toList())
+				.tokenJwt(jwt)
 				.build();
 	}
 
