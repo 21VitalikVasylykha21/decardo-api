@@ -81,6 +81,7 @@ public class UserService {
 
 	public User login(UserDTO userDTO) {
 		validation(userDTO);
+		findByUsername(userDTO.getUsername());
 		Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userDTO.getUsername(), userDTO.getPassword()));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();

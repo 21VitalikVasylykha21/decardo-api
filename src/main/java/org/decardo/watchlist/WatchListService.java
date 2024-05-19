@@ -4,10 +4,10 @@ import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 import org.decardo.art.Art;
+import org.decardo.art.ArtService;
 import org.decardo.exception.ExistObjectException;
 import org.decardo.user.User;
 import org.decardo.user.UserService;
-import org.decardo.art.ArtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,11 +28,15 @@ public class WatchListService {
 	private ArtService artService;
 
 	public List<WatchList> findAll() {
-		return watchListRepository.findAll();
+		List<WatchList> watchLists = watchListRepository.findAll();
+		watchLists.stream().map(WatchList::getArt).forEach(artService::calcRating);
+		return watchLists;
 	}
 
 	public List<WatchList> findByUserId(Long userId) {
-		return watchListRepository.findByUserId(userId);
+		List<WatchList> watchLists = watchListRepository.findByUserId(userId);
+		watchLists.stream().map(WatchList::getArt).forEach(artService::calcRating);
+		return watchLists;
 	}
 
 	@Transactional
