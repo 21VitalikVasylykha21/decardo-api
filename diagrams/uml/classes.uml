@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/Education/UzhNU/II course/II semester/Decardo/decardo-api/src/main</OriginalElement>
+  <nodes>
+    <node x="3560.419114468694" y="290.1466145472516">org.decardo.watchlist.WatchListService</node>
+    <node x="2703.9122958724292" y="948.4797829532605">org.decardo.security.jwt.AuthTokenFilter</node>
+    <node x="835.6606704747578" y="1445.9677385257219">org.decardo.user.UserMapper</node>
+    <node x="1460.1182492419498" y="723.1575129645969">org.decardo.art.ArtSearchResponse</node>
+    <node x="1676.0555867399844" y="216.95757272458974">org.decardo.user.UserUpdateRequestDTO</node>
+    <node x="2168.2865699843514" y="228.6532429543987">org.decardo.firebase.FirebaseStorageService</node>
+    <node x="3819.4305684085457" y="-16.316243514204942">org.decardo.comment.CommentController</node>
+    <node x="174.9862612296987" y="516.0119843211892">org.decardo.watchlist.WatchListController</node>
+    <node x="2045.589488998799" y="1755.1483327536835">org.decardo.rating.Rating</node>
+    <node x="641.72377514948" y="1103.7080089893782">org.decardo.comment.CommentService</node>
+    <node x="3968.4731323268315" y="1339.438721617446">org.decardo.Decardo</node>
+    <node x="812.6109492949199" y="362.777935715528">org.decardo.art.ArtResponseDTO</node>
+    <node x="342.21917589387" y="1436.630803036771">org.decardo.comment.Comment</node>
+    <node x="946.745867996992" y="90.4037010090442">org.decardo.response.ListObjectResponse</node>
+    <node x="-131.39034400006736" y="1019.6648623052922">org.decardo.user.UserRepository</node>
+    <node x="2961.7897572162274" y="1206.1773818703148">org.decardo.art.ArtInputDTO</node>
+    <node x="1132.5157239638472" y="1673.553830192648">org.decardo.rating.RatingId</node>
+    <node x="3384.629366120191" y="1659.7171046923313">org.decardo.art.Art</node>
+    <node x="3906.2572801527604" y="318.577414418349">org.decardo.security.jwt.AuthEntryPointJwt</node>
+    <node x="2019.568621281764" y="2278.4609401610314">org.decardo.art.model.Model</node>
+    <node x="4189.384221277528" y="847.0943038674542">org.decardo.art.model.ModelMapper</node>
+    <node x="2310.0374965614055" y="645.9680986717807">org.decardo.comment.CommentMapper</node>
+    <node x="1914.164798153813" y="1025.962425590682">org.decardo.art.model.ModelFormat</node>
+    <node x="1553.037472410425" y="1765.3745107929099">org.decardo.security.jwt.JwtUtils</node>
+    <node x="1355.607268591594" y="1173.4327793218586">org.decardo.art.ArtDTOValidator</node>
+    <node x="2228.1397423173785" y="1060.2965422324924">org.decardo.user.UserService</node>
+    <node x="166.47039078028274" y="1205.7129167794026">org.decardo.art.ArtRepository</node>
+    <node x="2951.590044603906" y="2284.006990497821">org.decardo.user.User</node>
+    <node x="3384.769613957797" y="545.5681971946442">org.decardo.user.UserDetailsServiceImpl</node>
+    <node x="1935.9717510115715" y="1239.7091203138632">org.decardo.watchlist.WatchListId</node>
+    <node x="1262.174547455847" y="1357.4789025060973">org.decardo.comment.CommentDTO</node>
+    <node x="986.281157368913" y="1095.479989019045">org.decardo.rating.RatingRepository</node>
+    <node x="1714.3815795108999" y="1502.5225759202444">org.decardo.watchlist.WatchList</node>
+    <node x="4167.573853327814" y="497.9494939672545">org.decardo.watchlist.WatchListMapper</node>
+    <node x="3044.6215809105956" y="1725.9951204747797">org.decardo.user.UserRole</node>
+    <node x="2123.1953756561643" y="1557.8466213505824">org.decardo.util.DateUtils</node>
+    <node x="2133.5652881398896" y="522.9308154866004">org.decardo.exception.ValidationException</node>
+    <node x="2641.0751936596575" y="1313.0409600202067">org.decardo.art.ArtMapper</node>
+    <node x="2784.4695871689596" y="582.9918667300323">org.decardo.security.WebSecurityConfig</node>
+    <node x="2533.2136686055555" y="54.70797244851735">org.decardo.response.MessageResponse</node>
+    <node x="2535.029415108337" y="838.6488124363817">org.decardo.art.model.ModelRepository</node>
+    <node x="1940.0295042979778" y="122.9190342978851">org.decardo.response.CustomResponse</node>
+    <node x="1308.4147724802494" y="912.1634975701992">org.decardo.user.UserDTOValidator</node>
+    <node x="2568.0169993819222" y="399.54864632300513">org.decardo.comment.CommentDTOValidator</node>
+    <node x="3156.270869436428" y="289.83565492675854">org.decardo.watchlist.WatchListWithoutUserDTO</node>
+    <node x="3699.1419329028886" y="1076.2088568214008">org.decardo.art.ArtController</node>
+    <node x="1553.5393756994288" y="-10.452589829428327">org.decardo.exception.EntityNotFoundException</node>
+    <node x="339.99017038746877" y="312.0172701945556">org.decardo.watchlist.WatchListRepository</node>
+    <node x="241.3062571891668" y="745.0958673229933">org.decardo.art.model.ModelSettingsDto</node>
+    <node x="4439.715154099914" y="342.1250193741158">org.decardo.exception.ExistObjectException</node>
+    <node x="3756.8546965588266" y="524.9939914935753">org.decardo.user.UserDetailsImpl</node>
+    <node x="1874.4143062078365" y="707.8968645160878">org.decardo.watchlist.WatchListDTO</node>
+    <node x="1541.1232926634814" y="549.2940018672514">org.decardo.comment.CommentRepository</node>
+    <node x="3394.8977705990274" y="1336.8998525974655">org.decardo.art.ArtService</node>
+    <node x="2504.3140979435616" y="1496.3741798112555">org.decardo.user.UserDTO</node>
+    <node x="2214.7874278911368" y="910.2228978459365">org.decardo.rating.RatingService</node>
+    <node x="1301.1840714088482" y="157.36652252932612">org.decardo.art.model.ModelLightSettingsDto</node>
+    <node x="3249.1159082879108" y="873.1718174125738">org.decardo.user.UserController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.decardo.user.UserMapper" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="3.2952524213669676E-4" y="-70.9997385257218" />
+      <point x="960.161" y="1321.933" />
+      <point x="1896.665" y="1321.933" />
+      <point x="1896.665" y="892.0" />
+      <point x="2227.0" y="892.0" />
+      <point x="2227.0" y="821.0" />
+      <point x="3668.0" y="821.0" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.response.MessageResponse" target="org.decardo.response.CustomResponse" relationship="REALIZATION">
+      <point x="-147.9996686055556" y="22.71102755148263" />
+      <point x="1886.5" y="174.419" />
+      <point x="1886.5" y="101.0" />
+      <point x="2035.53" y="101.0" />
+      <point x="4.957020219080732E-4" y="-17.0" />
+    </edge>
+    <edge source="org.decardo.user.UserController" target="org.decardo.user.UserDTO" relationship="DEPENDENCY">
+      <point x="-192.99990828791078" y="85.80818258742624" />
+      <point x="2602.529" y="1081.98" />
+      <point x="2602.529" y="1042.797" />
+      <point x="2212.0" y="1042.797" />
+      <point x="2212.0" y="1503.874" />
+      <point x="-193.5" y="-375.5001798112555" />
+    </edge>
+    <edge source="org.decardo.art.ArtMapper" target="org.decardo.art.model.ModelMapper" relationship="TO_ONE">
+      <point x="31.499806340342275" y="-44.9999600202068" />
+      <point x="2795.075" y="1126.172" />
+      <point x="3242.5" y="1126.172" />
+      <point x="3242.5" y="1176.5" />
+      <point x="3451.898" y="1176.5" />
+      <point x="3451.898" y="1613.0" />
+      <point x="4341.0" y="1613.0" />
+      <point x="4341.0" y="1143.209" />
+      <point x="4415.384" y="1143.209" />
+      <point x="14.999778722472001" y="83.99969613254586" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListController" target="org.decardo.watchlist.WatchList" relationship="DEPENDENCY">
+      <point x="241.9997387703013" y="1.5678810768804397E-5" />
+      <point x="782.0" y="600.012" />
+      <point x="782.0" y="1045.663" />
+      <point x="1881.914" y="1045.663" />
+      <point x="35.532420489100105" y="-96.99957592024452" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListMapper" target="org.decardo.watchlist.WatchListWithoutUserDTO" relationship="DEPENDENCY">
+      <point x="-211.49985332781398" y="-31.94949396725451" />
+      <point x="4134.855" y="524.0" />
+      <point x="4134.855" y="462.577" />
+      <point x="3874.419" y="462.577" />
+      <point x="3874.419" y="245.708" />
+      <point x="3323.771" y="245.708" />
+      <point x="1.3056357238383498E-4" y="-57.999654926758524" />
+    </edge>
+    <edge source="org.decardo.comment.CommentController" target="org.decardo.response.ListObjectResponse" relationship="CREATE">
+      <point x="-204.49956840854566" y="-84.47575648579506" />
+      <point x="2846.714" y="22.208" />
+      <point x="2846.714" y="0.0" />
+      <point x="2261.0" y="0.0" />
+      <point x="2261.0" y="-57.5" />
+      <point x="1093.246" y="-57.5" />
+      <point x="1.3200300804783183E-4" y="-96.9997010090442" />
+    </edge>
+    <edge source="org.decardo.user.UserController" target="org.decardo.user.UserMapper" relationship="TO_ONE">
+      <point x="193.0" y="58.82818258742623" />
+      <point x="3912.5" y="1055.0" />
+      <point x="3912.5" y="1015.0" />
+      <point x="4134.855" y="1015.0" />
+      <point x="4134.855" y="1043.094" />
+      <point x="4805.715" y="1043.094" />
+      <point x="4805.715" y="3184.507" />
+      <point x="970.661" y="3184.507" />
+      <point x="10.500329525242137" y="71.0" />
+    </edge>
+    <edge source="org.decardo.security.WebSecurityConfig" target="org.decardo.user.UserDetailsServiceImpl" relationship="TO_ONE">
+      <point x="177.5304128310404" y="110.0" />
+      <point x="3232.0" y="808.0" />
+      <point x="3540.77" y="808.0" />
+      <point x="3.860422029902111E-4" y="44.999802805355785" />
+    </edge>
+    <edge source="org.decardo.Decardo" target="org.decardo.Decardo" relationship="DEPENDENCY">
+      <point x="35.526867673168454" y="45.0" />
+      <point x="4094.5" y="1459.9" />
+      <point x="4181.973" y="1459.9" />
+      <point x="4181.973" y="1384.438721617446" />
+      <point x="90.5" y="0.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtDTOValidator" target="org.decardo.art.ArtInputDTO" relationship="DEPENDENCY">
+      <point x="-249.0" y="9.500220678141432" />
+      <point x="1115.016" y="1240.933" />
+      <point x="1115.016" y="3093.007" />
+      <point x="4166.973" y="3093.007" />
+      <point x="4166.973" y="1313.0" />
+      <point x="3592.898" y="1313.0" />
+      <point x="3592.898" y="1262.709" />
+      <point x="181.0" y="-157.46838187031472" />
+    </edge>
+    <edge source="org.decardo.art.ArtController" target="org.decardo.art.ArtResponseDTO" relationship="DEPENDENCY">
+      <point x="-281.49993290288876" y="89.50014317859927" />
+      <point x="3667.0" y="1262.709" />
+      <point x="3667.0" y="1239.0" />
+      <point x="3348.5" y="1239.0" />
+      <point x="3348.5" y="3174.007" />
+      <point x="-199.89" y="3174.007" />
+      <point x="-199.89" y="697.012" />
+      <point x="-195.99994929491993" y="3.2340642844719696" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.art.ArtRepository" relationship="TO_ONE">
+      <point x="-228.0" y="10.500147402534594" />
+      <point x="3369.5" y="1470.4" />
+      <point x="3369.5" y="1686.7171046923313" />
+      <point x="3000.7897572162274" y="1686.7171046923313" />
+      <point x="3000.7897572162274" y="2090.0" />
+      <point x="2904.314" y="2090.0" />
+      <point x="2904.314" y="2927.9609401610314" />
+      <point x="314.219" y="2927.9609401610314" />
+      <point x="-59.75139078028275" y="31.5" />
+    </edge>
+    <edge source="org.decardo.user.UserDetailsImpl" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="-174.9996965588266" y="8.506424705956306E-6" />
+      <point x="3714.27" y="699.994" />
+      <point x="3714.27" y="821.0" />
+      <point x="3668.0" y="821.0" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="142.0" y="67.2249910106218" />
+      <point x="1896.665" y="1306.933" />
+      <point x="1896.665" y="892.0" />
+      <point x="2227.0" y="892.0" />
+      <point x="2227.0" y="821.0" />
+      <point x="3668.0" y="821.0" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.comment.CommentMapper" target="org.decardo.comment.Comment" relationship="DEPENDENCY">
+      <point x="-4.965614057255152E-4" y="-58.0" />
+      <point x="2476.537" y="478.0" />
+      <point x="1247.246" y="478.0" />
+      <point x="1247.246" y="1062.0" />
+      <point x="598.97" y="1062.0" />
+      <point x="79.25082410613004" y="-200.99980303677103" />
+    </edge>
+    <edge source="org.decardo.comment.CommentDTOValidator" target="org.decardo.comment.CommentDTO" relationship="DEPENDENCY">
+      <point x="6.180775926623028E-7" y="58.00000000000006" />
+      <point x="2825.017" y="565.492" />
+      <point x="2755.0" y="565.492" />
+      <point x="2755.0" y="917.723" />
+      <point x="2557.529" y="917.723" />
+      <point x="2557.529" y="1452.0" />
+      <point x="1681.882" y="1452.0" />
+      <point x="1681.882" y="1467.0" />
+      <point x="183.5" y="-0.47890250609725626" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchList" target="org.decardo.art.Art" relationship="TO_ONE">
+      <point x="93.65542048910015" y="97.0" />
+      <point x="1940.037" y="3229.507" />
+      <point x="3392.129" y="3229.507" />
+      <point x="3392.129" y="2235.217" />
+      <point x="3302.0" y="2235.217" />
+      <point x="3302.0" y="1959.5" />
+      <point x="-209.5" y="20.782895307668696" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.art.model.Model" relationship="DEPENDENCY">
+      <point x="-40.499770599027215" y="-122.9998525974654" />
+      <point x="3582.398" y="1199.177" />
+      <point x="3326.79" y="1199.177" />
+      <point x="3326.79" y="1143.0" />
+      <point x="2628.075" y="1143.0" />
+      <point x="2628.075" y="1477.5" />
+      <point x="2032.589" y="1477.5" />
+      <point x="-190.97962128176414" y="-291.99994016103165" />
+    </edge>
+    <edge source="org.decardo.comment.CommentMapper" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="-4.965614057255152E-4" y="57.999901328219266" />
+      <point x="2476.537" y="821.0" />
+      <point x="3668.0" y="821.0" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.art.ArtController" target="org.decardo.art.ArtInputDTO" relationship="DEPENDENCY">
+      <point x="6.70971112413099E-5" y="-96.99985682140073" />
+      <point x="3980.642" y="1055.0" />
+      <point x="4279.642" y="1055.0" />
+      <point x="4279.642" y="1313.0" />
+      <point x="3592.898" y="1313.0" />
+      <point x="3592.898" y="1262.709" />
+      <point x="181.0" y="-157.46838187031472" />
+    </edge>
+    <edge source="org.decardo.security.WebSecurityConfig" target="org.decardo.security.jwt.AuthTokenFilter" relationship="CREATE">
+      <point x="-138.05729129653037" y="110.0" />
+      <point x="-11.0" y="-58.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtRepository" target="org.decardo.art.Art" relationship="DEPENDENCY">
+      <point x="-49.25139078028275" y="31.5" />
+      <point x="324.719" y="2285.961" />
+      <point x="2002.069" y="2285.961" />
+      <point x="2002.069" y="1467.0" />
+      <point x="2908.814" y="1467.0" />
+      <point x="2908.814" y="1938.717" />
+      <point x="-209.5" y="-1.0469233120602439E-4" />
+    </edge>
+    <edge source="org.decardo.art.model.ModelMapper" target="org.decardo.art.model.ModelLightSettingsDto" relationship="DEPENDENCY">
+      <point x="-211.0" y="-10.500303867454136" />
+      <point x="3739.77" y="920.594" />
+      <point x="3739.77" y="511.5" />
+      <point x="3137.017" y="511.5" />
+      <point x="3137.017" y="370.336" />
+      <point x="2479.2865699843514" y="370.336" />
+      <point x="2479.2865699843514" y="203.95757272458974" />
+      <point x="149.5" y="-50.40894980473638" />
+    </edge>
+    <edge source="org.decardo.rating.Rating" target="org.decardo.util.DateUtils" relationship="DEPENDENCY">
+      <point x="-4.889987990281952E-4" y="-110.0" />
+      <point x="2189.589" y="1726.0" />
+      <point x="2248.195" y="1726.0" />
+      <point x="-3.7565616412393865E-4" y="58.0" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchList" target="org.decardo.watchlist.WatchListId" relationship="TO_ONE">
+      <point x="124.5" y="-97.0" />
+      <point x="-80.09017150067166" y="84.0" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.comment.CommentService" relationship="DEPENDENCY">
+      <point x="30.00022485052" y="136.0" />
+      <point x="813.724" y="1393.2080089893782" />
+      <point x="1008.781" y="1393.2080089893782" />
+      <point x="1008.781" y="1364.9789025060973" />
+      <point x="142.0" y="125.27089351671907" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.art.ArtInputDTO" relationship="DEPENDENCY">
+      <point x="15.000229400972785" y="-122.9998525974654" />
+      <point x="3637.898" y="1313.0" />
+      <point x="3592.898" y="1313.0" />
+      <point x="3592.898" y="1262.709" />
+      <point x="181.0" y="-157.46838187031472" />
+    </edge>
+    <edge source="org.decardo.user.UserMapper" target="org.decardo.art.ArtMapper" relationship="TO_ONE">
+      <point x="-14.999670474757863" y="71.0" />
+      <point x="945.161" y="3153.007" />
+      <point x="4825.215" y="3153.007" />
+      <point x="4825.215" y="736.449" />
+      <point x="4124.355" y="736.449" />
+      <point x="4124.355" y="501.0" />
+      <point x="3356.77" y="501.0" />
+      <point x="3356.77" y="831.649" />
+      <point x="3213.412" y="831.649" />
+      <point x="3213.412" y="1176.5" />
+      <point x="2774.075" y="1176.5" />
+      <point x="10.499806340342275" y="-44.9999600202068" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListWithoutUserDTO" target="org.decardo.art.ArtResponseDTO" relationship="TO_ONE">
+      <point x="-167.49986943642762" y="3.4507324147625695E-4" />
+      <point x="2506.537" y="347.836" />
+      <point x="2506.537" y="618.431" />
+      <point x="2226.787" y="618.431" />
+      <point x="2226.787" y="674.0" />
+      <point x="1232.246" y="674.0" />
+      <point x="1232.246" y="690.397" />
+      <point x="196.0" y="-3.380935715527926" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.user.UserDTO" relationship="DEPENDENCY">
+      <point x="-147.9997423173786" y="4.5776750766890473E-4" />
+      <point x="2212.0" y="1248.297" />
+      <point x="2212.0" y="1503.874" />
+      <point x="-193.5" y="-375.5001798112555" />
+    </edge>
+    <edge source="org.decardo.user.User" target="org.decardo.art.Art" relationship="TO_MANY">
+      <point x="-15.000044603905735" y="-382.9999904978208" />
+      <point x="3127.09" y="1959.5" />
+      <point x="-209.5" y="20.782895307668696" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListController" target="org.decardo.watchlist.WatchListDTO" relationship="DEPENDENCY">
+      <point x="-134.9962612296987" y="-83.99998432118923" />
+      <point x="281.99" y="299.017" />
+      <point x="1258.184" y="299.017" />
+      <point x="1258.184" y="691.0" />
+      <point x="2050.914" y="691.0" />
+      <point x="14.999693792163725" y="-70.99986451608777" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.comment.Comment" relationship="DEPENDENCY">
+      <point x="2.248505199986539E-4" y="-136.0" />
+      <point x="783.724" y="1062.0" />
+      <point x="598.97" y="1062.0" />
+      <point x="79.25082410613004" y="-200.99980303677103" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListService" target="org.decardo.user.UserService" relationship="TO_ONE">
+      <point x="-141.5" y="49.18938545274841" />
+      <point x="3341.97" y="423.336" />
+      <point x="3341.97" y="846.149" />
+      <point x="3168.412" y="846.149" />
+      <point x="3168.412" y="1166.0" />
+      <point x="2671.412" y="1166.0" />
+      <point x="2671.412" y="1248.297" />
+      <point x="148.0" y="4.5776750766890473E-4" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListService" target="org.decardo.art.ArtService" relationship="TO_ONE">
+      <point x="141.49988553130606" y="77.9303854527484" />
+      <point x="4780.215" y="452.077" />
+      <point x="4780.215" y="1476.939" />
+      <point x="4079.5" y="1476.939" />
+      <point x="4079.5" y="1459.9" />
+      <point x="228.0" y="1.4740253459422092E-4" />
+    </edge>
+    <edge source="org.decardo.security.jwt.JwtUtils" target="org.decardo.security.jwt.JwtUtils" relationship="DEPENDENCY">
+      <point x="0.0" y="-136.0" />
+      <point x="1726.537472410425" y="1752.1483327536835" />
+      <point x="1950.537" y="1752.1483327536835" />
+      <point x="1950.537" y="1854.6483327536835" />
+      <point x="173.5" y="-46.7261780392264" />
+    </edge>
+    <edge source="org.decardo.security.WebSecurityConfig" target="org.decardo.security.jwt.AuthEntryPointJwt" relationship="TO_ONE">
+      <point x="270.0" y="21.288165232305914" />
+      <point x="4141.75728015276" y="714.2800319623382" />
+      <point x="-0.0" y="58.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.user.UserService" relationship="TO_ONE">
+      <point x="-14.999770599027215" y="-122.9998525974654" />
+      <point x="3607.898" y="1166.0" />
+      <point x="2671.412" y="1166.0" />
+      <point x="2671.412" y="1248.297" />
+      <point x="148.0" y="4.5776750766890473E-4" />
+    </edge>
+    <edge source="org.decardo.user.UserRepository" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="156.0" y="1.3769470774604997E-4" />
+      <point x="1846.107" y="1077.165" />
+      <point x="1846.107" y="892.0" />
+      <point x="2227.0" y="892.0" />
+      <point x="2227.0" y="821.0" />
+      <point x="3668.0" y="821.0" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.art.ArtMapper" target="org.decardo.comment.CommentMapper" relationship="TO_ONE">
+      <point x="-102.66319365965774" y="-44.9999600202068" />
+      <point x="2660.912" y="934.223" />
+      <point x="2771.47" y="934.223" />
+      <point x="2771.47" y="531.0" />
+      <point x="2521.537" y="531.0" />
+      <point x="44.999503438594274" y="-58.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtDTOValidator" target="org.decardo.exception.ValidationException" relationship="CREATE">
+      <point x="-2.6859159402192745E-4" y="-57.99977932185857" />
+      <point x="1604.607" y="1118.0" />
+      <point x="1867.414" y="1118.0" />
+      <point x="1867.414" y="1012.962" />
+      <point x="2174.0" y="1012.962" />
+      <point x="2174.0" y="879.649" />
+      <point x="2211.787" y="879.649" />
+      <point x="-38.77828813988981" y="31.5" />
+    </edge>
+    <edge source="org.decardo.art.ArtMapper" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="-77.16319365965774" y="-44.9999600202068" />
+      <point x="2686.412" y="892.0" />
+      <point x="2227.0" y="892.0" />
+      <point x="2227.0" y="821.0" />
+      <point x="3668.0" y="821.0" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.comment.CommentController" target="org.decardo.comment.CommentMapper" relationship="TO_ONE">
+      <point x="-204.49956840854566" y="15.00024351420494" />
+      <point x="3508.771" y="121.684" />
+      <point x="3508.771" y="531.0" />
+      <point x="2521.537" y="531.0" />
+      <point x="44.999503438594274" y="-58.0" />
+    </edge>
+    <edge source="org.decardo.art.model.ModelMapper" target="org.decardo.firebase.FirebaseStorageService" relationship="TO_ONE">
+      <point x="210.999778722472" y="-3.0386745413579774E-4" />
+      <point x="4865.715" y="931.094" />
+      <point x="4865.715" y="-158.0" />
+      <point x="2205.787" y="-158.0" />
+      <point x="2205.787" y="189.419" />
+      <point x="2116.065" y="189.419" />
+      <point x="2116.065" y="325.653" />
+      <point x="-148.99956998435164" y="-2.4295439868637914E-4" />
+    </edge>
+    <edge source="org.decardo.art.model.ModelMapper" target="org.decardo.art.model.ModelFormat" relationship="DEPENDENCY">
+      <point x="-211.0" y="4.905696132545813" />
+      <point x="1919.0" y="936.0" />
+      <point x="-114.16479815381308" y="-58.0" />
+    </edge>
+    <edge source="org.decardo.rating.RatingRepository" target="org.decardo.rating.RatingId" relationship="DEPENDENCY">
+      <point x="98.73456659493422" y="31.5" />
+      <point x="0.0" y="-84.0" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListService" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="12.350885531306176" y="84.0" />
+      <point x="3714.27" y="821.0" />
+      <point x="3668.0" y="821.0" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.comment.CommentRepository" target="org.decardo.comment.Comment" relationship="DEPENDENCY">
+      <point x="-2.926634813320561E-4" y="-44.5" />
+      <point x="1683.123" y="478.0" />
+      <point x="1247.246" y="478.0" />
+      <point x="1247.246" y="1062.0" />
+      <point x="598.97" y="1062.0" />
+      <point x="79.25082410613004" y="-200.99980303677103" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.exception.ValidationException" relationship="CREATE">
+      <point x="142.0" y="-28.775008989378193" />
+      <point x="1323.107" y="1210.933" />
+      <point x="1323.107" y="1118.0" />
+      <point x="1867.414" y="1118.0" />
+      <point x="1867.414" y="1012.962" />
+      <point x="2174.0" y="1012.962" />
+      <point x="2174.0" y="879.649" />
+      <point x="2211.787" y="879.649" />
+      <point x="-38.77828813988981" y="31.5" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.comment.CommentRepository" relationship="TO_ONE">
+      <point x="-142.0" y="-112.54314668408597" />
+      <point x="213.10965599993264" y="1127.1648623052922" />
+      <point x="213.10965599993264" y="954.0958673229933" />
+      <point x="142.4862612296987" y="954.0958673229933" />
+      <point x="142.4862612296987" y="4.046999999999997" />
+      <point x="1495.6840714088482" y="4.046999999999997" />
+      <point x="1495.6840714088482" y="139.86652252932612" />
+      <point x="1658.5555867399844" y="139.86652252932612" />
+      <point x="-24.567705923496987" y="-44.5" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.art.Art" relationship="DEPENDENCY">
+      <point x="2.2940097278478788E-4" y="-122.9998525974654" />
+      <point x="3622.898" y="1213.677" />
+      <point x="3684.0" y="1213.677" />
+      <point x="3684.0" y="1188.209" />
+      <point x="2923.814" y="1188.209" />
+      <point x="2923.814" y="1467.0" />
+      <point x="2908.814" y="1467.0" />
+      <point x="2908.814" y="1938.717" />
+      <point x="-209.5" y="-1.0469233120602439E-4" />
+    </edge>
+    <edge source="org.decardo.comment.CommentController" target="org.decardo.comment.Comment" relationship="DEPENDENCY">
+      <point x="-204.49956840854566" y="-69.47575648579506" />
+      <point x="2148.53" y="37.208" />
+      <point x="2148.53" y="478.0" />
+      <point x="1247.246" y="478.0" />
+      <point x="1247.246" y="1062.0" />
+      <point x="598.97" y="1062.0" />
+      <point x="79.25082410613004" y="-200.99980303677103" />
+    </edge>
+    <edge source="org.decardo.art.Art" target="org.decardo.comment.Comment" relationship="TO_MANY">
+      <point x="10.499633879808698" y="279.0" />
+      <point x="3604.629" y="2265.3741798112555" />
+      <point x="2894.3140979435616" y="2265.3741798112555" />
+      <point x="2894.3140979435616" y="2896.9609401610314" />
+      <point x="519.71917589387" y="2896.9609401610314" />
+      <point x="0.0" y="201.0" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.user.UserDTOValidator" relationship="TO_ONE">
+      <point x="0.0" y="-188.0" />
+      <point x="2376.1397423173785" y="1038.163497570199" />
+      <point x="1561.9147724802494" y="1038.163497570199" />
+      <point x="0.0" y="57.999999999999886" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListService" target="org.decardo.exception.ExistObjectException" relationship="CREATE">
+      <point x="14.999885531306063" y="-83.99961454725161" />
+      <point x="3716.919" y="-72.5" />
+      <point x="4303.5" y="-72.5" />
+      <point x="4303.5" y="296.0" />
+      <point x="4578.715" y="296.0" />
+      <point x="-1.5409991374326637E-4" y="-44.5" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.rating.RatingService" relationship="TO_ONE">
+      <point x="-228.0" y="0.0" />
+      <point x="2483.7874278911368" y="1459.8998525974655" />
+      <point x="2483.7874278911368" y="955.2228978459365" />
+      <point x="129.5" y="0.0" />
+    </edge>
+    <edge source="org.decardo.comment.CommentController" target="org.decardo.comment.CommentService" relationship="TO_ONE">
+      <point x="-9.499568408545656" y="-123.0" />
+      <point x="4014.431" y="-28.5" />
+      <point x="797.224" y="-28.5" />
+      <point x="13.500224850519999" y="-136.0" />
+    </edge>
+    <edge source="org.decardo.user.User" target="org.decardo.watchlist.WatchList" relationship="TO_MANY">
+      <point x="-190.5" y="219.45394966321055" />
+      <point x="2015.569" y="2886.4609401610314" />
+      <point x="2015.569" y="1599.5225759202444" />
+      <point x="132.0" y="0.0" />
+    </edge>
+    <edge source="org.decardo.user.UserDetailsServiceImpl" target="org.decardo.user.UserRepository" relationship="TO_ONE">
+      <point x="-155.999613957797" y="-35.57619719464424" />
+      <point x="2743.029" y="554.992" />
+      <point x="2743.029" y="903.223" />
+      <point x="2650.412" y="903.223" />
+      <point x="2650.412" y="1113.0" />
+      <point x="2904.314" y="1113.0" />
+      <point x="2904.314" y="1453.5" />
+      <point x="2789.075" y="1453.5" />
+      <point x="2789.075" y="1477.5" />
+      <point x="2919.314" y="1477.5" />
+      <point x="2919.314" y="3163.507" />
+      <point x="-189.39" y="3163.507" />
+      <point x="-189.39" y="1077.165" />
+      <point x="-155.99965599993263" y="1.3769470774604997E-4" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.user.UserDetailsImpl" relationship="DEPENDENCY">
+      <point x="2.576826213953609E-4" y="-187.99954223249233" />
+      <point x="2376.14" y="855.0" />
+      <point x="3646.0" y="855.0" />
+      <point x="3646.0" y="748.0" />
+      <point x="-174.9996965588266" y="48.00600850642468" />
+    </edge>
+    <edge source="org.decardo.rating.Rating" target="org.decardo.rating.RatingId" relationship="TO_ONE">
+      <point x="-144.0" y="-5.0" />
+      <point x="1969.382" y="1860.1483327536835" />
+      <point x="1969.382" y="1742.6483327536835" />
+      <point x="105.0" y="-14.90549743896463" />
+    </edge>
+    <edge source="org.decardo.security.jwt.AuthEntryPointJwt" target="org.decardo.response.MessageResponse" relationship="CREATE">
+      <point x="104.17371984723923" y="-58.0" />
+      <point x="4245.931" y="-38.0" />
+      <point x="2681.214" y="-38.0" />
+      <point x="3.31394444401667E-4" y="-96.99997244851735" />
+    </edge>
+    <edge source="org.decardo.art.ArtController" target="org.decardo.art.Art" relationship="DEPENDENCY">
+      <point x="-281.49993290288876" y="1.4317859927359677E-4" />
+      <point x="3684.0" y="1173.209" />
+      <point x="3684.0" y="1188.209" />
+      <point x="2923.814" y="1188.209" />
+      <point x="2923.814" y="1467.0" />
+      <point x="2908.814" y="1467.0" />
+      <point x="2908.814" y="1938.717" />
+      <point x="-209.5" y="-1.0469233120602439E-4" />
+    </edge>
+    <edge source="org.decardo.user.UserController" target="org.decardo.response.CustomResponse" relationship="DEPENDENCY">
+      <point x="-74.84590828791079" y="-122.99981741257375" />
+      <point x="3367.27" y="438.336" />
+      <point x="3099.517" y="438.336" />
+      <point x="3099.517" y="-19.0" />
+      <point x="2050.53" y="-19.0" />
+      <point x="15.000495702022363" y="-17.0" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListService" target="org.decardo.watchlist.WatchListRepository" relationship="TO_ONE">
+      <point x="-10.500114468693937" y="-84.0" />
+      <point x="3691.419" y="10.5" />
+      <point x="1888.0" y="10.5" />
+      <point x="1888.0" y="-23.452589829428327" />
+      <point x="544.9901703874688" y="-23.452589829428327" />
+      <point x="0.0" y="-57.5" />
+    </edge>
+    <edge source="org.decardo.art.ArtController" target="org.decardo.response.MessageResponse" relationship="CREATE">
+      <point x="281.5" y="1.4317859927359677E-4" />
+      <point x="4735.215" y="1173.209" />
+      <point x="4735.215" y="-57.5" />
+      <point x="2276.0" y="-57.5" />
+      <point x="2276.0" y="-38.0" />
+      <point x="2681.214" y="-38.0" />
+      <point x="3.31394444401667E-4" y="-96.99997244851735" />
+    </edge>
+    <edge source="org.decardo.art.model.Model" target="org.decardo.art.model.ModelFormat" relationship="TO_ONE">
+      <point x="204.0" y="0.0" />
+      <point x="2485.569" y="2570.4609401610314" />
+      <point x="2485.569" y="1520.374" />
+      <point x="2178.9717510115715" y="1520.374" />
+      <point x="2178.9717510115715" y="1083.962425590682" />
+      <point x="119.0" y="0.0" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListController" target="org.decardo.watchlist.WatchListService" relationship="TO_ONE">
+      <point x="1.1368683772161603E-13" y="-84.0" />
+      <point x="416.9862612296988" y="468.1466145472516" />
+      <point x="3701.919114468694" y="468.1466145472516" />
+      <point x="0.0" y="84.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtMapper" target="org.decardo.comment.CommentDTO" relationship="DEPENDENCY">
+      <point x="14.999806340342275" y="45.0" />
+      <point x="2778.575" y="1452.0" />
+      <point x="1681.882" y="1452.0" />
+      <point x="1681.882" y="1467.0" />
+      <point x="183.5" y="-0.47890250609725626" />
+    </edge>
+    <edge source="org.decardo.user.UserDetailsServiceImpl" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="3.860422029902111E-4" y="44.999802805355785" />
+      <point x="3540.77" y="821.0" />
+      <point x="3668.0" y="821.0" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.art.ArtSearchResponse" target="org.decardo.art.Art" relationship="DEPENDENCY">
+      <point x="-2.492419498594245E-4" y="58.0" />
+      <point x="1601.118" y="868.897" />
+      <point x="2194.414" y="868.897" />
+      <point x="2194.414" y="1467.0" />
+      <point x="2908.814" y="1467.0" />
+      <point x="2908.814" y="1938.717" />
+      <point x="-209.5" y="-1.0469233120602439E-4" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.exception.ValidationException" relationship="CREATE">
+      <point x="-147.9997423173786" y="-180.49954223249233" />
+      <point x="2174.0" y="1067.797" />
+      <point x="2174.0" y="879.649" />
+      <point x="2211.787" y="879.649" />
+      <point x="-38.77828813988981" y="31.5" />
+    </edge>
+    <edge source="org.decardo.art.model.ModelSettingsDto" target="org.decardo.art.model.ModelLightSettingsDto" relationship="TO_ONE">
+      <point x="-205.0" y="0.0" />
+      <point x="157.4862612296987" y="894.0958673229933" />
+      <point x="157.4862612296987" y="56.047" />
+      <point x="1450.6840714088482" y="56.047" />
+      <point x="0.0" y="-97.0" />
+    </edge>
+    <edge source="org.decardo.user.UserDTOValidator" target="org.decardo.user.UserDTO" relationship="DEPENDENCY">
+      <point x="2.275197505241522E-4" y="57.99950242980083" />
+      <point x="1561.915" y="1158.0" />
+      <point x="2212.0" y="1158.0" />
+      <point x="2212.0" y="1503.874" />
+      <point x="-193.5" y="-375.5001798112555" />
+    </edge>
+    <edge source="org.decardo.user.UserMapper" target="org.decardo.art.ArtService" relationship="TO_ONE">
+      <point x="3.2952524213669676E-4" y="71.0" />
+      <point x="960.161" y="3067.507" />
+      <point x="4079.5" y="3067.507" />
+      <point x="4079.5" y="1459.9" />
+      <point x="228.0" y="1.4740253459422092E-4" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.user.UserUpdateRequestDTO" relationship="DEPENDENCY">
+      <point x="148.0" y="-166.31654223249234" />
+      <point x="2587.529" y="1081.98" />
+      <point x="2587.529" y="1098.0" />
+      <point x="3189.412" y="1098.0" />
+      <point x="3189.412" y="831.649" />
+      <point x="2727.029" y="831.649" />
+      <point x="2727.029" y="604.931" />
+      <point x="1877.414" y="604.931" />
+      <point x="2.8584132600155954" y="123.0" />
+    </edge>
+    <edge source="org.decardo.comment.CommentController" target="org.decardo.comment.CommentDTO" relationship="DEPENDENCY">
+      <point x="-204.49956840854566" y="2.43514204939288E-4" />
+      <point x="3114.517" y="106.684" />
+      <point x="3114.517" y="565.492" />
+      <point x="2755.0" y="565.492" />
+      <point x="2755.0" y="917.723" />
+      <point x="2557.529" y="917.723" />
+      <point x="2557.529" y="1452.0" />
+      <point x="1681.882" y="1452.0" />
+      <point x="1681.882" y="1467.0" />
+      <point x="183.5" y="-0.47890250609725626" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.comment.CommentMapper" relationship="TO_ONE">
+      <point x="-141.99977514948" y="-51.49500898937822" />
+      <point x="-178.89" y="1188.213" />
+      <point x="-178.89" y="-117.5" />
+      <point x="4810.215" y="-117.5" />
+      <point x="4810.215" y="475.647" />
+      <point x="3567.919" y="475.647" />
+      <point x="3567.919" y="531.0" />
+      <point x="2521.537" y="531.0" />
+      <point x="44.999503438594274" y="-58.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.art.model.ModelRepository" relationship="TO_ONE">
+      <point x="4.072865496942995" y="-123.0" />
+      <point x="3626.9706360959703" y="855.6488124363817" />
+      <point x="94.5" y="0.0" />
+    </edge>
+    <edge source="org.decardo.user.UserMapper" target="org.decardo.watchlist.WatchList" relationship="DEPENDENCY">
+      <point x="-14.999670474757863" y="-70.9997385257218" />
+      <point x="945.161" y="1045.663" />
+      <point x="1881.914" y="1045.663" />
+      <point x="35.532420489100105" y="-96.99957592024452" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.art.ArtDTOValidator" relationship="TO_ONE">
+      <point x="214.73122940097255" y="123.0" />
+      <point x="3837.629" y="3109.507" />
+      <point x="2846.314" y="3109.507" />
+      <point x="2846.314" y="2917.4609401610314" />
+      <point x="1439.5157239638472" y="2917.4609401610314" />
+      <point x="1439.5157239638472" y="1590.9677385257219" />
+      <point x="1642.174547455847" y="1590.9677385257219" />
+      <point x="37.56727886425301" y="58.0" />
+    </edge>
+    <edge source="org.decardo.security.jwt.AuthTokenFilter" target="org.decardo.security.jwt.AuthTokenFilter" relationship="DEPENDENCY">
+      <point x="4.0" y="-58.0" />
+      <point x="2931.4122958724292" y="923.223" />
+      <point x="3203.412" y="923.223" />
+      <point x="3203.412" y="986.672" />
+      <point x="223.5" y="-19.80778295326047" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.exception.EntityNotFoundException" relationship="CREATE">
+      <point x="15.000224850519999" y="135.9999910106219" />
+      <point x="798.724" y="1620.468" />
+      <point x="1666.882" y="1620.468" />
+      <point x="1666.882" y="1430.0" />
+      <point x="2130.695" y="1430.0" />
+      <point x="2130.695" y="1533.874" />
+      <point x="2445.069" y="1533.874" />
+      <point x="2445.069" y="3123.007" />
+      <point x="-163.89" y="3123.007" />
+      <point x="-163.89" y="34.047" />
+      <point x="-153.5" y="-4.101705716763604E-4" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.exception.EntityNotFoundException" relationship="CREATE">
+      <point x="198.23122940097255" y="123.0" />
+      <point x="3821.129" y="3123.007" />
+      <point x="2460.069" y="3123.007" />
+      <point x="2460.069" y="1533.874" />
+      <point x="2445.069" y="1533.874" />
+      <point x="2445.069" y="3123.007" />
+      <point x="-163.89" y="3123.007" />
+      <point x="-163.89" y="34.047" />
+      <point x="-153.5" y="-4.101705716763604E-4" />
+    </edge>
+    <edge source="org.decardo.security.jwt.AuthTokenFilter" target="org.decardo.user.UserDetailsServiceImpl" relationship="TO_ONE">
+      <point x="223.49970412757057" y="-49.9797829532605" />
+      <point x="3232.0" y="956.5" />
+      <point x="3232.0" y="808.0" />
+      <point x="3540.77" y="808.0" />
+      <point x="3.860422029902111E-4" y="44.999802805355785" />
+    </edge>
+    <edge source="org.decardo.user.UserDetailsServiceImpl" target="org.decardo.user.UserDetailsImpl" relationship="DEPENDENCY">
+      <point x="105.23038604220301" y="44.999802805355785" />
+      <point x="3646.0" y="748.0" />
+      <point x="-174.9996965588266" y="48.00600850642468" />
+    </edge>
+    <edge source="org.decardo.art.Art" target="org.decardo.user.User" relationship="TO_ONE">
+      <point x="-3.6612019130188855E-4" y="278.9998953076688" />
+      <point x="3594.129" y="2251.0" />
+      <point x="3142.09" y="2251.0" />
+      <point x="-4.4603905735129956E-5" y="-382.9999904978208" />
+    </edge>
+    <edge source="org.decardo.user.UserMapper" target="org.decardo.user.UserDTO" relationship="DEPENDENCY">
+      <point x="33.62032952524214" y="-70.9997385257218" />
+      <point x="993.781" y="1225.933" />
+      <point x="1338.107" y="1225.933" />
+      <point x="1338.107" y="1158.0" />
+      <point x="2212.0" y="1158.0" />
+      <point x="2212.0" y="1503.874" />
+      <point x="-193.5" y="-375.5001798112555" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListController" target="org.decardo.response.CustomResponse" relationship="DEPENDENCY">
+      <point x="-124.49626122969869" y="-83.99998432118923" />
+      <point x="292.49" y="-102.5" />
+      <point x="2816.714" y="-102.5" />
+      <point x="2816.714" y="-19.0" />
+      <point x="2050.53" y="-19.0" />
+      <point x="15.000495702022363" y="-17.0" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListController" target="org.decardo.watchlist.WatchListWithoutUserDTO" relationship="DEPENDENCY">
+      <point x="-242.0" y="1.5678810768804397E-5" />
+      <point x="-189.39" y="600.012" />
+      <point x="-189.39" y="-143.0" />
+      <point x="4850.715" y="-143.0" />
+      <point x="4850.715" y="674.949" />
+      <point x="4146.855" y="674.949" />
+      <point x="4146.855" y="887.994" />
+      <point x="4134.855" y="887.994" />
+      <point x="4134.855" y="462.577" />
+      <point x="3874.419" y="462.577" />
+      <point x="3874.419" y="245.708" />
+      <point x="3323.771" y="245.708" />
+      <point x="1.3056357238383498E-4" y="-57.999654926758524" />
+    </edge>
+    <edge source="org.decardo.art.ArtController" target="org.decardo.art.ArtService" relationship="TO_ONE">
+      <point x="-29.668932902888628" y="97.0" />
+      <point x="3950.973" y="1459.9" />
+      <point x="228.0" y="1.4740253459422092E-4" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListController" target="org.decardo.response.MessageResponse" relationship="CREATE">
+      <point x="-94.49626122969869" y="-83.99998432118923" />
+      <point x="322.49" y="-38.0" />
+      <point x="2681.214" y="-38.0" />
+      <point x="3.31394444401667E-4" y="-96.99997244851735" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.art.ArtService" relationship="TO_ONE">
+      <point x="-14.999775149480001" y="135.9999910106219" />
+      <point x="768.724" y="3067.507" />
+      <point x="4079.5" y="3067.507" />
+      <point x="4079.5" y="1459.9" />
+      <point x="228.0" y="1.4740253459422092E-4" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListMapper" target="org.decardo.watchlist.WatchList" relationship="DEPENDENCY">
+      <point x="15.683146672186012" y="-58.0" />
+      <point x="4394.757" y="272.336" />
+      <point x="2540.714" y="272.336" />
+      <point x="2540.714" y="493.0" />
+      <point x="1232.246" y="493.0" />
+      <point x="1232.246" y="343.867" />
+      <point x="782.0" y="343.867" />
+      <point x="782.0" y="1045.663" />
+      <point x="1881.914" y="1045.663" />
+      <point x="35.532420489100105" y="-96.99957592024452" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchList" target="org.decardo.user.User" relationship="TO_ONE">
+      <point x="78.65542048910015" y="97.0" />
+      <point x="1925.037" y="3214.507" />
+      <point x="3374.0" y="3214.507" />
+      <point x="3374.0" y="2251.0" />
+      <point x="3142.09" y="2251.0" />
+      <point x="-4.4603905735129956E-5" y="-382.9999904978208" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListMapper" target="org.decardo.user.UserMapper" relationship="TO_ONE">
+      <point x="-208.0738533278136" y="57.999506032745444" />
+      <point x="4171.0" y="1015.0" />
+      <point x="4134.855" y="1015.0" />
+      <point x="4134.855" y="1043.094" />
+      <point x="4805.715" y="1043.094" />
+      <point x="4805.715" y="3184.507" />
+      <point x="970.661" y="3184.507" />
+      <point x="10.500329525242137" y="71.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtResponseDTO" target="org.decardo.art.model.ModelSettingsDto" relationship="TO_ONE">
+      <point x="-196.0" y="200.3179316074653" />
+      <point x="205.0" y="0.0" />
+    </edge>
+    <edge source="org.decardo.user.UserController" target="org.decardo.user.UserUpdateRequestDTO" relationship="DEPENDENCY">
+      <point x="-192.99990828791078" y="1.8258742625221203E-4" />
+      <point x="3193.912" y="996.172" />
+      <point x="3193.912" y="1098.0" />
+      <point x="3189.412" y="1098.0" />
+      <point x="3189.412" y="831.649" />
+      <point x="2727.029" y="831.649" />
+      <point x="2727.029" y="604.931" />
+      <point x="1877.414" y="604.931" />
+      <point x="2.8584132600155954" y="123.0" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.firebase.FirebaseStorageService" relationship="TO_ONE">
+      <point x="140.64725768262133" y="-187.99954223249233" />
+      <point x="2516.787" y="841.649" />
+      <point x="2269.0" y="841.649" />
+      <point x="2269.0" y="657.0" />
+      <point x="2116.065" y="657.0" />
+      <point x="2116.065" y="325.653" />
+      <point x="-148.99956998435164" y="-2.4295439868637914E-4" />
+    </edge>
+    <edge source="org.decardo.comment.CommentMapper" target="org.decardo.art.Art" relationship="DEPENDENCY">
+      <point x="29.749503438594274" y="57.999901328219266" />
+      <point x="2506.287" y="970.98" />
+      <point x="2542.529" y="970.98" />
+      <point x="2542.529" y="1467.0" />
+      <point x="2908.814" y="1467.0" />
+      <point x="2908.814" y="1938.717" />
+      <point x="-209.5" y="-1.0469233120602439E-4" />
+    </edge>
+    <edge source="org.decardo.response.ListObjectResponse" target="org.decardo.response.ListObjectResponse" relationship="DEPENDENCY">
+      <point x="15.000132003008048" y="-97.0" />
+      <point x="1108.246" y="19.046999999999997" />
+      <point x="1308.6840714088482" y="19.046999999999997" />
+      <point x="1308.6840714088482" y="139.86652252932612" />
+      <point x="146.5" y="-47.53717847971808" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListService" target="org.decardo.watchlist.WatchListId" relationship="DEPENDENCY">
+      <point x="-141.5" y="3.8545274838952537E-4" />
+      <point x="3531.271" y="374.147" />
+      <point x="3531.271" y="286.836" />
+      <point x="2551.214" y="286.836" />
+      <point x="2551.214" y="509.5" />
+      <point x="1838.123" y="509.5" />
+      <point x="1838.123" y="657.0" />
+      <point x="1856.607" y="657.0" />
+      <point x="1856.607" y="1171.48" />
+      <point x="1907.165" y="1171.48" />
+      <point x="1907.165" y="1323.709" />
+      <point x="-114.99975101157156" y="-1.203138631353795E-4" />
+    </edge>
+    <edge source="org.decardo.art.model.ModelMapper" target="org.decardo.art.model.Model" relationship="DEPENDENCY">
+      <point x="-211.0" y="-3.0386745413579774E-4" />
+      <point x="3653.5" y="931.094" />
+      <point x="3653.5" y="860.172" />
+      <point x="3178.912" y="860.172" />
+      <point x="3178.912" y="1143.0" />
+      <point x="2628.075" y="1143.0" />
+      <point x="2628.075" y="1477.5" />
+      <point x="2032.589" y="1477.5" />
+      <point x="-190.97962128176414" y="-291.99994016103165" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.art.Art" relationship="DEPENDENCY">
+      <point x="2.248505199986539E-4" y="135.9999910106219" />
+      <point x="783.724" y="1605.468" />
+      <point x="1696.882" y="1605.468" />
+      <point x="1696.882" y="1467.0" />
+      <point x="2908.814" y="1467.0" />
+      <point x="2908.814" y="1938.717" />
+      <point x="-209.5" y="-1.0469233120602439E-4" />
+    </edge>
+    <edge source="org.decardo.comment.CommentController" target="org.decardo.response.MessageResponse" relationship="CREATE">
+      <point x="4.315914543440158E-4" y="-122.99975648579506" />
+      <point x="4023.931" y="-38.0" />
+      <point x="2681.214" y="-38.0" />
+      <point x="3.31394444401667E-4" y="-96.99997244851735" />
+    </edge>
+    <edge source="org.decardo.art.ArtMapper" target="org.decardo.art.ArtResponseDTO" relationship="DEPENDENCY">
+      <point x="20.999806340342275" y="-44.9999600202068" />
+      <point x="2784.575" y="1155.5" />
+      <point x="3511.5" y="1155.5" />
+      <point x="3511.5" y="1239.0" />
+      <point x="3348.5" y="1239.0" />
+      <point x="3348.5" y="3174.007" />
+      <point x="-199.89" y="3174.007" />
+      <point x="-199.89" y="697.012" />
+      <point x="-195.99994929491993" y="3.2340642844719696" />
+    </edge>
+    <edge source="org.decardo.security.jwt.AuthEntryPointJwt" target="org.decardo.security.jwt.AuthEntryPointJwt" relationship="DEPENDENCY">
+      <point x="119.17371984723923" y="-58.0" />
+      <point x="4260.931" y="222.18375648579507" />
+      <point x="4413.757" y="222.18375648579507" />
+      <point x="4413.757" y="376.577414418349" />
+      <point x="235.5" y="0.0" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListRepository" target="org.decardo.watchlist.WatchList" relationship="DEPENDENCY">
+      <point x="204.99982961253124" y="-2.7019455558274785E-4" />
+      <point x="782.0" y="369.517" />
+      <point x="782.0" y="1045.663" />
+      <point x="1881.914" y="1045.663" />
+      <point x="35.532420489100105" y="-96.99957592024452" />
+    </edge>
+    <edge source="org.decardo.art.ArtController" target="org.decardo.art.ArtSearchResponse" relationship="DEPENDENCY">
+      <point x="-281.5" y="0.0" />
+      <point x="3689.1419329028886" y="1173.2088568214008" />
+      <point x="3689.1419329028886" y="782.4799827009065" />
+      <point x="141.0" y="1.3224697363095856" />
+    </edge>
+    <edge source="org.decardo.comment.CommentController" target="org.decardo.response.CustomResponse" relationship="DEPENDENCY">
+      <point x="-204.49956840854566" y="-106.68375648579506" />
+      <point x="3163.771" y="0.0" />
+      <point x="3163.771" y="-19.0" />
+      <point x="2050.53" y="-19.0" />
+      <point x="15.000495702022363" y="-17.0" />
+    </edge>
+    <edge source="org.decardo.art.model.ModelMapper" target="org.decardo.art.model.ModelSettingsDto" relationship="DEPENDENCY">
+      <point x="-10.500221277527999" y="84.0" />
+      <point x="4389.884" y="3078.007" />
+      <point x="2949.09" y="3078.007" />
+      <point x="2949.09" y="3053.006990497821" />
+      <point x="153.47039078028274" y="3053.006990497821" />
+      <point x="153.47039078028274" y="1155.6648623052922" />
+      <point x="446.3062571891668" y="1155.6648623052922" />
+      <point x="0.0" y="149.0000000000001" />
+    </edge>
+    <edge source="org.decardo.user.UserController" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="193.0" y="1.8258742625221203E-4" />
+      <point x="3668.0" y="996.172" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.response.ListObjectResponse" target="org.decardo.response.CustomResponse" relationship="REALIZATION">
+      <point x="146.5" y="2.9899095579821733E-4" />
+      <point x="1283.684" y="187.404" />
+      <point x="1283.684" y="101.0" />
+      <point x="2035.53" y="101.0" />
+      <point x="4.957020219080732E-4" y="-17.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtMapper" target="org.decardo.art.model.Model" relationship="DEPENDENCY">
+      <point x="-1.936596577252203E-4" y="-44.9999600202068" />
+      <point x="2763.575" y="1143.0" />
+      <point x="2628.075" y="1143.0" />
+      <point x="2628.075" y="1477.5" />
+      <point x="2032.589" y="1477.5" />
+      <point x="-190.97962128176414" y="-291.99994016103165" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.art.ArtSearchResponse" relationship="CREATE">
+      <point x="8.145501592913206" y="-123.0" />
+      <point x="3631.0432721919406" y="849.1575129645969" />
+      <point x="1601.1182492419498" y="849.1575129645969" />
+      <point x="0.0" y="58.0" />
+    </edge>
+    <edge source="org.decardo.user.UserMapper" target="org.decardo.user.UserMapper" relationship="DEPENDENCY">
+      <point x="48.62032952524214" y="-71.0" />
+      <point x="1008.781" y="1419.130803036771" />
+      <point x="1155.0157239638472" y="1419.130803036771" />
+      <point x="1155.0157239638472" y="1516.9677385257219" />
+      <point x="124.5" y="0.0" />
+    </edge>
+    <edge source="org.decardo.security.WebSecurityConfig" target="org.decardo.security.WebSecurityConfig" relationship="DEPENDENCY">
+      <point x="270.0" y="31.288165232305914" />
+      <point x="3434.4695871689596" y="724.2800319623382" />
+      <point x="3434.4695871689596" y="792.9918667300323" />
+      <point x="270.0" y="100.0" />
+    </edge>
+    <edge source="org.decardo.user.UserDTO" target="org.decardo.art.ArtResponseDTO" relationship="TO_MANY">
+      <point x="-9.794356174097629E-5" y="382.99982018874425" />
+      <point x="2697.814" y="3108.007" />
+      <point x="-148.89" y="3108.007" />
+      <point x="-148.89" y="71.047" />
+      <point x="1268.684" y="71.047" />
+      <point x="1268.684" y="674.0" />
+      <point x="1232.246" y="674.0" />
+      <point x="1232.246" y="690.397" />
+      <point x="196.0" y="-3.380935715527926" />
+    </edge>
+    <edge source="org.decardo.art.model.ModelMapper" target="org.decardo.art.model.ModelMapper" relationship="DEPENDENCY">
+      <point x="0.0" y="-84.0" />
+      <point x="4400.384221277528" y="829.5943038674542" />
+      <point x="4628.884221277528" y="829.5943038674542" />
+      <point x="4628.884221277528" y="916.094" />
+      <point x="211.0" y="-15.000303867454136" />
+    </edge>
+    <edge source="org.decardo.security.jwt.AuthTokenFilter" target="org.decardo.security.jwt.JwtUtils" relationship="TO_ONE">
+      <point x="-223.5" y="15.520217046739504" />
+      <point x="1910.037" y="1022.0" />
+      <point x="1910.037" y="1901.375" />
+      <point x="173.4995275895751" y="4.892070901405532E-4" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.security.jwt.JwtUtils" relationship="TO_ONE">
+      <point x="2.576826213953609E-4" y="-187.99954223249233" />
+      <point x="2376.14" y="1022.0" />
+      <point x="1910.037" y="1022.0" />
+      <point x="1910.037" y="1901.375" />
+      <point x="173.4995275895751" y="4.892070901405532E-4" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.comment.CommentDTO" relationship="DEPENDENCY">
+      <point x="142.0" y="97.2249910106218" />
+      <point x="1846.107" y="1336.933" />
+      <point x="1846.107" y="1452.0" />
+      <point x="1681.882" y="1452.0" />
+      <point x="1681.882" y="1467.0" />
+      <point x="183.5" y="-0.47890250609725626" />
+    </edge>
+    <edge source="org.decardo.user.User" target="org.decardo.user.UserRole" relationship="TO_ONE">
+      <point x="-24.500044603905735" y="-383.0" />
+      <point x="-32.031580910595494" y="58.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtController" target="org.decardo.response.ListObjectResponse" relationship="CREATE">
+      <point x="-281.49993290288876" y="-14.999856821400726" />
+      <point x="3652.0" y="1158.209" />
+      <point x="3652.0" y="1287.709" />
+      <point x="4750.215" y="1287.709" />
+      <point x="4750.215" y="-87.5" />
+      <point x="2831.714" y="-87.5" />
+      <point x="2831.714" y="0.0" />
+      <point x="2261.0" y="0.0" />
+      <point x="2261.0" y="-57.5" />
+      <point x="1093.246" y="-57.5" />
+      <point x="1.3200300804783183E-4" y="-96.9997010090442" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListService" target="org.decardo.art.Art" relationship="DEPENDENCY">
+      <point x="27.350885531306176" y="84.0" />
+      <point x="3729.27" y="986.0" />
+      <point x="3684.0" y="986.0" />
+      <point x="3684.0" y="1188.209" />
+      <point x="2923.814" y="1188.209" />
+      <point x="2923.814" y="1467.0" />
+      <point x="2908.814" y="1467.0" />
+      <point x="2908.814" y="1938.717" />
+      <point x="-209.5" y="-1.0469233120602439E-4" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListMapper" target="org.decardo.art.ArtMapper" relationship="TO_ONE">
+      <point x="-211.49985332781398" y="-4.939672545560825E-4" />
+      <point x="4124.355" y="555.949" />
+      <point x="4124.355" y="501.0" />
+      <point x="3356.77" y="501.0" />
+      <point x="3356.77" y="831.649" />
+      <point x="3213.412" y="831.649" />
+      <point x="3213.412" y="1176.5" />
+      <point x="2774.075" y="1176.5" />
+      <point x="10.499806340342275" y="-44.9999600202068" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="115.14725768262133" y="-187.99954223249233" />
+      <point x="2491.287" y="892.0" />
+      <point x="2227.0" y="892.0" />
+      <point x="2227.0" y="821.0" />
+      <point x="3668.0" y="821.0" />
+      <point x="3668.0" y="1142.5" />
+      <point x="3359.0" y="1142.5" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.exception.ExistObjectException" relationship="CREATE">
+      <point x="14.555257682621686" y="188.0" />
+      <point x="2390.695" y="2007.648" />
+      <point x="1970.882" y="2007.648" />
+      <point x="1970.882" y="3199.507" />
+      <point x="4880.715" y="3199.507" />
+      <point x="4880.715" y="-173.0" />
+      <point x="4303.5" y="-173.0" />
+      <point x="4303.5" y="296.0" />
+      <point x="4578.715" y="296.0" />
+      <point x="-1.5409991374326637E-4" y="-44.5" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListController" target="org.decardo.response.ListObjectResponse" relationship="CREATE">
+      <point x="-109.49626122969869" y="-83.99998432118923" />
+      <point x="307.49" y="-72.5" />
+      <point x="2261.0" y="-72.5" />
+      <point x="2261.0" y="-57.5" />
+      <point x="1093.246" y="-57.5" />
+      <point x="1.3200300804783183E-4" y="-96.9997010090442" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.art.model.ModelMapper" relationship="TO_ONE">
+      <point x="228.0" y="32.03914740253458" />
+      <point x="4341.0" y="1491.939" />
+      <point x="4341.0" y="1143.209" />
+      <point x="4415.384" y="1143.209" />
+      <point x="14.999778722472001" y="83.99969613254586" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.user.UserService" relationship="TO_ONE">
+      <point x="-25.49977514948" y="135.9999910106219" />
+      <point x="758.224" y="3078.007" />
+      <point x="2938.59" y="3078.007" />
+      <point x="2938.59" y="1166.0" />
+      <point x="2671.412" y="1166.0" />
+      <point x="2671.412" y="1248.297" />
+      <point x="148.0" y="4.5776750766890473E-4" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.exception.EntityNotFoundException" relationship="CREATE">
+      <point x="-147.9997423173786" y="-26.087542232492297" />
+      <point x="1918.472" y="1222.209" />
+      <point x="1918.472" y="1430.0" />
+      <point x="2130.695" y="1430.0" />
+      <point x="2130.695" y="1533.874" />
+      <point x="2445.069" y="1533.874" />
+      <point x="2445.069" y="3123.007" />
+      <point x="-163.89" y="3123.007" />
+      <point x="-163.89" y="34.047" />
+      <point x="-153.5" y="-4.101705716763604E-4" />
+    </edge>
+    <edge source="org.decardo.firebase.FirebaseStorageService" target="org.decardo.firebase.FirebaseStorageService" relationship="DEPENDENCY">
+      <point x="0.0" y="-97.0" />
+      <point x="2317.2865699843514" y="189.419" />
+      <point x="2491.537" y="189.419" />
+      <point x="2491.537" y="241.20797244851735" />
+      <point x="149.0" y="-84.44527050588135" />
+    </edge>
+    <edge source="org.decardo.user.UserController" target="org.decardo.response.ListObjectResponse" relationship="CREATE">
+      <point x="193.0" y="-20.171817412573773" />
+      <point x="3652.0" y="976.0" />
+      <point x="3652.0" y="1287.709" />
+      <point x="4750.215" y="1287.709" />
+      <point x="4750.215" y="-87.5" />
+      <point x="2831.714" y="-87.5" />
+      <point x="2831.714" y="0.0" />
+      <point x="2261.0" y="0.0" />
+      <point x="2261.0" y="-57.5" />
+      <point x="1093.246" y="-57.5" />
+      <point x="1.3200300804783183E-4" y="-96.9997010090442" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListService" target="org.decardo.watchlist.WatchList" relationship="DEPENDENCY">
+      <point x="-1.1446869393694215E-4" y="-83.99961454725161" />
+      <point x="3701.919" y="272.336" />
+      <point x="2540.714" y="272.336" />
+      <point x="2540.714" y="493.0" />
+      <point x="1232.246" y="493.0" />
+      <point x="1232.246" y="343.867" />
+      <point x="782.0" y="343.867" />
+      <point x="782.0" y="1045.663" />
+      <point x="1881.914" y="1045.663" />
+      <point x="35.532420489100105" y="-96.99957592024452" />
+    </edge>
+    <edge source="org.decardo.comment.CommentMapper" target="org.decardo.comment.CommentDTO" relationship="DEPENDENCY">
+      <point x="166.49950343859427" y="-9.867178073363903E-5" />
+      <point x="2755.0" y="703.968" />
+      <point x="2755.0" y="917.723" />
+      <point x="2557.529" y="917.723" />
+      <point x="2557.529" y="1452.0" />
+      <point x="1681.882" y="1452.0" />
+      <point x="1681.882" y="1467.0" />
+      <point x="183.5" y="-0.47890250609725626" />
+    </edge>
+    <edge source="org.decardo.art.model.ModelMapper" target="org.decardo.art.ArtInputDTO" relationship="DEPENDENCY">
+      <point x="-2.21277527998609E-4" y="83.99969613254586" />
+      <point x="4400.384" y="1055.0" />
+      <point x="4279.642" y="1055.0" />
+      <point x="4279.642" y="1313.0" />
+      <point x="3592.898" y="1313.0" />
+      <point x="3592.898" y="1262.709" />
+      <point x="181.0" y="-157.46838187031472" />
+    </edge>
+    <edge source="org.decardo.art.ArtDTOValidator" target="org.decardo.art.ArtDTOValidator" relationship="DEPENDENCY">
+      <point x="239.51573140840605" y="-58.0" />
+      <point x="1844.123" y="1138.962425590682" />
+      <point x="1867.107" y="1138.962425590682" />
+      <point x="1867.107" y="1232.7091203138632" />
+      <point x="249.0" y="1.2763409920046342" />
+    </edge>
+    <edge source="org.decardo.art.model.ModelRepository" target="org.decardo.art.model.Model" relationship="DEPENDENCY">
+      <point x="-4.1510833716529305E-4" y="17.0" />
+      <point x="2629.529" y="1143.0" />
+      <point x="2628.075" y="1143.0" />
+      <point x="2628.075" y="1477.5" />
+      <point x="2032.589" y="1477.5" />
+      <point x="-190.97962128176414" y="-291.99994016103165" />
+    </edge>
+    <edge source="org.decardo.art.Art" target="org.decardo.art.model.Model" relationship="TO_ONE">
+      <point x="209.5" y="0.0" />
+      <point x="3813.629366120191" y="1938.7171046923313" />
+      <point x="3813.629366120191" y="2872.4609401610314" />
+      <point x="2223.568621281764" y="2872.4609401610314" />
+      <point x="0.0" y="292.0" />
+    </edge>
+    <edge source="org.decardo.rating.RatingRepository" target="org.decardo.rating.Rating" relationship="DEPENDENCY">
+      <point x="31.234566594934222" y="31.5" />
+      <point x="1170.0157239638472" y="1652.631" />
+      <point x="1499.5157239638472" y="1652.631" />
+      <point x="1499.5157239638472" y="2054.87451079291" />
+      <point x="1955.037" y="2054.87451079291" />
+      <point x="1955.037" y="1869.6483327536835" />
+      <point x="-144.0" y="4.5" />
+    </edge>
+    <edge source="org.decardo.rating.RatingService" target="org.decardo.rating.RatingRepository" relationship="TO_ONE">
+      <point x="0.0" y="-45.0" />
+      <point x="2344.2874278911368" y="900.2228978459365" />
+      <point x="1301.281157368913" y="900.2228978459365" />
+      <point x="1301.281157368913" y="1126.979989019045" />
+      <point x="152.5" y="0.0" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListRepository" target="org.decardo.watchlist.WatchListId" relationship="DEPENDENCY">
+      <point x="204.99982961253124" y="-40.65027019455556" />
+      <point x="1283.684" y="328.867" />
+      <point x="1283.684" y="657.0" />
+      <point x="1856.607" y="657.0" />
+      <point x="1856.607" y="1171.48" />
+      <point x="1907.165" y="1171.48" />
+      <point x="1907.165" y="1323.709" />
+      <point x="-114.99975101157156" y="-1.203138631353795E-4" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.user.UserService" relationship="DEPENDENCY">
+      <point x="125.64725768262133" y="-188.0" />
+      <point x="2501.787" y="997.2228978459365" />
+      <point x="2576.029" y="997.2228978459365" />
+      <point x="2576.029" y="1071.4797829532604" />
+      <point x="148.0" y="-176.81675927923197" />
+    </edge>
+    <edge source="org.decardo.user.UserController" target="org.decardo.response.MessageResponse" relationship="CREATE">
+      <point x="193.0" y="36.42218258742628" />
+      <point x="4735.215" y="1032.594" />
+      <point x="4735.215" y="-57.5" />
+      <point x="2276.0" y="-57.5" />
+      <point x="2276.0" y="-38.0" />
+      <point x="2681.214" y="-38.0" />
+      <point x="3.31394444401667E-4" y="-96.99997244851735" />
+    </edge>
+    <edge source="org.decardo.comment.CommentMapper" target="org.decardo.util.DateUtils" relationship="DEPENDENCY">
+      <point x="14.999503438594274" y="-58.0" />
+      <point x="2491.537" y="257.336" />
+      <point x="4795.215" y="257.336" />
+      <point x="4795.215" y="3138.007" />
+      <point x="2475.069" y="3138.007" />
+      <point x="2475.069" y="1726.0" />
+      <point x="2248.195" y="1726.0" />
+      <point x="-3.7565616412393865E-4" y="58.0" />
+    </edge>
+    <edge source="org.decardo.user.UserService" target="org.decardo.user.UserRepository" relationship="TO_ONE">
+      <point x="148.0" y="-14.999542232492331" />
+      <point x="2613.075" y="1233.297" />
+      <point x="2613.075" y="1113.0" />
+      <point x="2904.314" y="1113.0" />
+      <point x="2904.314" y="1453.5" />
+      <point x="2789.075" y="1453.5" />
+      <point x="2789.075" y="1477.5" />
+      <point x="2919.314" y="1477.5" />
+      <point x="2919.314" y="3163.507" />
+      <point x="-189.39" y="3163.507" />
+      <point x="-189.39" y="1077.165" />
+      <point x="-155.99965599993263" y="1.3769470774604997E-4" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListDTO" target="org.decardo.art.ArtResponseDTO" relationship="TO_ONE">
+      <point x="-3.0620783650192607E-4" y="-70.99986451608777" />
+      <point x="2035.914" y="674.0" />
+      <point x="1232.246" y="674.0" />
+      <point x="1232.246" y="690.397" />
+      <point x="196.0" y="-3.380935715527926" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.user.User" relationship="DEPENDENCY">
+      <point x="-227.99977059902722" y="1.4740253459422092E-4" />
+      <point x="3359.0" y="1459.9" />
+      <point x="3359.0" y="2667.007" />
+      <point x="190.49995539609426" y="9.502179182163673E-6" />
+    </edge>
+    <edge source="org.decardo.art.ArtService" target="org.decardo.art.ArtService" relationship="DEPENDENCY">
+      <point x="225.23122940097255" y="123.0" />
+      <point x="3848.129" y="1667.2171046923313" />
+      <point x="3873.129" y="1667.2171046923313" />
+      <point x="3873.129" y="1506.939" />
+      <point x="228.0" y="47.03914740253458" />
+    </edge>
+    <edge source="org.decardo.comment.Comment" target="org.decardo.util.DateUtils" relationship="DEPENDENCY">
+      <point x="177.49982410613006" y="1.9696322897289065E-4" />
+      <point x="1666.882" y="1637.631" />
+      <point x="1666.882" y="1726.0" />
+      <point x="2248.195" y="1726.0" />
+      <point x="-3.7565616412393865E-4" y="58.0" />
+    </edge>
+    <edge source="org.decardo.comment.CommentService" target="org.decardo.comment.CommentDTOValidator" relationship="TO_ONE">
+      <point x="0.0" y="-136.0" />
+      <point x="783.72377514948" y="457.5486463230052" />
+      <point x="-257.0" y="5.6843418860808015E-14" />
+    </edge>
+    <edge source="org.decardo.user.UserDetailsImpl" target="org.decardo.user.UserDetailsImpl" relationship="CREATE">
+      <point x="0.0" y="-175.0" />
+      <point x="3931.8546965588266" y="511.5" />
+      <point x="4145.355" y="511.5" />
+      <point x="4145.355" y="545.449" />
+      <point x="175.0" y="-154.54499149357537" />
+    </edge>
+    <edge source="org.decardo.art.ArtController" target="org.decardo.art.ArtMapper" relationship="TO_ONE">
+      <point x="143.71306709711098" y="-96.99985682140073" />
+      <point x="4124.355" y="501.0" />
+      <point x="3356.77" y="501.0" />
+      <point x="3356.77" y="831.649" />
+      <point x="3213.412" y="831.649" />
+      <point x="3213.412" y="1176.5" />
+      <point x="2774.075" y="1176.5" />
+      <point x="10.499806340342275" y="-44.9999600202068" />
+    </edge>
+    <edge source="org.decardo.user.UserController" target="org.decardo.user.UserService" relationship="TO_ONE">
+      <point x="-98.11590828791077" y="123.0" />
+      <point x="3344.0" y="1166.0" />
+      <point x="2671.412" y="1166.0" />
+      <point x="2671.412" y="1248.297" />
+      <point x="148.0" y="4.5776750766890473E-4" />
+    </edge>
+    <edge source="org.decardo.art.ArtResponseDTO" target="org.decardo.comment.CommentDTO" relationship="TO_MANY">
+      <point x="-48.449949294919975" y="331.0" />
+      <point x="960.161" y="1195.9327793218586" />
+      <point x="1283.781157368913" y="1195.9327793218586" />
+      <point x="-161.893390086934" y="-110.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtController" target="org.decardo.response.CustomResponse" relationship="DEPENDENCY">
+      <point x="281.5" y="-14.999856821400726" />
+      <point x="4765.215" y="1158.209" />
+      <point x="4765.215" y="-102.5" />
+      <point x="2816.714" y="-102.5" />
+      <point x="2816.714" y="-19.0" />
+      <point x="2050.53" y="-19.0" />
+      <point x="15.000495702022363" y="-17.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtDTOValidator" target="org.decardo.art.model.ModelFormat" relationship="DEPENDENCY">
+      <point x="229.01573140840605" y="-57.99977932185857" />
+      <point x="1833.623" y="881.5" />
+      <point x="1919.0" y="881.5" />
+      <point x="-114.16479815381308" y="-58.0" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListController" target="org.decardo.watchlist.WatchListMapper" relationship="TO_ONE">
+      <point x="-144.4962612296987" y="-84.0" />
+      <point x="272.49" y="46.547" />
+      <point x="1472.1840714088482" y="46.547" />
+      <point x="1472.1840714088482" y="130.36652252932612" />
+      <point x="1876.5393756994288" y="130.36652252932612" />
+      <point x="1876.5393756994288" y="27.708" />
+      <point x="2835.2136686055555" y="27.708" />
+      <point x="2835.2136686055555" y="50.708" />
+      <point x="3518.271" y="50.708" />
+      <point x="3518.271" y="485.147" />
+      <point x="4379.25728015276" y="485.147" />
+      <point x="0.1834268249467641" y="-58.0" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListDTO" target="org.decardo.user.UserDTO" relationship="TO_ONE">
+      <point x="161.5" y="32.03561707784638" />
+      <point x="2494.3140979435616" y="810.9324815939342" />
+      <point x="2494.3140979435616" y="1879.3741798112555" />
+      <point x="-193.5" y="0.0" />
+    </edge>
+    <edge source="org.decardo.art.ArtMapper" target="org.decardo.art.Art" relationship="DEPENDENCY">
+      <point x="-1.936596577252203E-4" y="45.0" />
+      <point x="2763.575" y="1467.0" />
+      <point x="2908.814" y="1467.0" />
+      <point x="2908.814" y="1938.717" />
+      <point x="-209.5" y="-1.0469233120602439E-4" />
+    </edge>
+    <edge source="org.decardo.watchlist.WatchListMapper" target="org.decardo.watchlist.WatchListDTO" relationship="DEPENDENCY">
+      <point x="211.5" y="-4.939672545560825E-4" />
+      <point x="4840.215" y="555.949" />
+      <point x="4840.215" y="-132.5" />
+      <point x="1922.53" y="-132.5" />
+      <point x="1922.53" y="189.419" />
+      <point x="2090.556" y="189.419" />
+      <point x="2090.556" y="691.0" />
+      <point x="2050.914" y="691.0" />
+      <point x="14.999693792163725" y="-70.99986451608777" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.3523225241016652" showDependencies="true" x="2337.9999999999995" y="1528.4999999999995" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
